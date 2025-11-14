@@ -37,12 +37,13 @@ export default function Button({
   const combinedClassName = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
 
   if (href) {
-    if (external) {
+    // Use regular anchor tag for external links or anchor links (#)
+    if (external || href.startsWith('#')) {
       return (
         <a
           href={href}
-          target="_blank"
-          rel="noopener noreferrer"
+          target={external ? "_blank" : undefined}
+          rel={external ? "noopener noreferrer" : undefined}
           className={combinedClassName}
         >
           {children}

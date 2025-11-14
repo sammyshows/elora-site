@@ -25,7 +25,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       {/* Sticky Header */}
       <motion.header
         initial={{ y: -100 }}
@@ -51,7 +51,7 @@ export default function Home() {
       </motion.header>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 overflow-x-hidden">
         <GradientShimmer />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
@@ -84,49 +84,51 @@ export default function Home() {
             </motion.div>
 
             {/* Hero Screenshots - Three Overlapping */}
-            <div className="flex-1 flex justify-center items-center overflow-visible">
-              <div className="relative w-full h-[500px] md:h-[600px]">
-                {/* Left Screenshot - Text or Voice */}
-                <motion.div
-                  initial={{ opacity: 0, x: -50, y: 20 }}
-                  animate={{ opacity: 1, x: 0, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="absolute left-0 top-[60px] z-10"
-                >
-                  <img
-                    src="/screenshots/text-or-voice.webp"
-                    alt="Voice or Text Journaling"
-                    className="h-[360px] md:h-[440px] w-auto max-w-none rounded-3xl shadow-2xl"
-                  />
-                </motion.div>
+            <div className="flex-1 flex justify-center items-center overflow-x-auto md:overflow-visible">
+              <div className="relative w-full h-[350px] md:h-[600px] flex justify-center md:justify-start">
+                <div className="relative w-[370px] md:w-full h-full">
+                  {/* Left Screenshot - Text or Voice */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -50, y: 20 }}
+                    animate={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="absolute left-0 md:left-0 top-[30px] md:top-[60px] z-10"
+                  >
+                    <img
+                      src="/screenshots/text-or-voice.webp"
+                      alt="Voice or Text Journaling"
+                      className="h-[240px] md:h-[440px] w-auto max-w-none rounded-2xl md:rounded-3xl shadow-2xl"
+                    />
+                  </motion.div>
 
-                {/* Center Screenshot - Grow (Featured) */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  className="absolute left-[150px] md:left-[187px] top-0 z-20"
-                >
-                  <img
-                    src="/screenshots/grow.webp"
-                    alt="Track Your Growth with Elora"
-                    className="h-[440px] md:h-[540px] w-auto max-w-none rounded-3xl shadow-2xl"
-                  />
-                </motion.div>
+                  {/* Center Screenshot - Grow (Featured) */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    className="absolute left-[120px] md:left-[187px] top-[60px] md:top-0 z-20"
+                  >
+                    <img
+                      src="/screenshots/grow.webp"
+                      alt="Track Your Growth with Elora"
+                      className="h-[290px] md:h-[540px] w-auto max-w-none rounded-2xl md:rounded-3xl shadow-2xl"
+                    />
+                  </motion.div>
 
-                {/* Right Screenshot - Simply Fun */}
-                <motion.div
-                  initial={{ opacity: 0, x: 50, y: 30 }}
-                  animate={{ opacity: 1, x: 0, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  className="absolute left-[337px] md:left-[420px] top-[100px] z-10"
-                >
-                  <img
-                    src="/screenshots/simply-fun.webp"
-                    alt="Beautiful Journaling Experience"
-                    className="h-[320px] md:h-[380px] w-auto max-w-none rounded-3xl shadow-2xl"
-                  />
-                </motion.div>
+                  {/* Right Screenshot - Simply Fun */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 50, y: 30 }}
+                    animate={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className="absolute left-[265px] md:left-[420px] top-[40px] md:top-[100px] z-10"
+                  >
+                    <img
+                      src="/screenshots/simply-fun.webp"
+                      alt="Beautiful Journaling Experience"
+                      className="h-[220px] md:h-[380px] w-auto max-w-none rounded-2xl md:rounded-3xl shadow-2xl"
+                    />
+                  </motion.div>
+                </div>
               </div>
             </div>
           </div>
@@ -304,7 +306,7 @@ export default function Home() {
 
       {/* Screenshots-as-Story Section */}
       <AnimatedSection background="bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 md:space-y-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 md:space-y-32 overflow-hidden">
           <ScreenshotShowcase
             imageSrc="/screenshots/start-with-one.webp"
             title="Start with just one thought"
