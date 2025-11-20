@@ -46,9 +46,16 @@ export const metadata: Metadata = {
     images: ['/screenshots/hero.webp'],
   },
   icons: {
-    icon: '/icon.svg',
-    apple: '/icon.svg',
+    icon: [
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: ['/favicon.ico'],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
+  manifest: '/site.webmanifest',
   viewport: {
     width: 'device-width',
     initialScale: 1,
@@ -56,6 +63,7 @@ export const metadata: Metadata = {
   },
   other: {
     'color-scheme': 'light',
+    'apple-itunes-app': 'app-id=6753067869',
   },
   robots: {
     index: true,
@@ -91,6 +99,13 @@ export default function RootLayout({
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "priceValidUntil": "2025-12-31"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "ratingCount": "16",
+          "bestRating": "5",
+          "worstRating": "1"
         },
         "description": "Elora is a voice-first, emotionally intelligent AI journaling app that provides deep insights for personal growth. Features include voice journaling, text journaling, AI-powered insights, pattern recognition, timeline visualization, and the Explore feature for chatting with your journal history. Completely private with end-to-end encryption.",
         "downloadUrl": "https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869",

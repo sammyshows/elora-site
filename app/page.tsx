@@ -39,14 +39,20 @@ export default function Home() {
             <Image src="/icon.svg" alt="Elora" width={40} height={40} className="rounded-xl" />
             <span className="text-2xl font-bold text-text">Elora</span>
           </div>
-          <Button
-            variant="primary"
-            size="sm"
-            href="https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869"
-            external
-          >
-            Download
-          </Button>
+          <div className="flex items-center gap-4">
+            <div className="hidden md:flex items-center gap-1 text-sm">
+              <span className="text-yellow-500">★★★★★</span>
+              <span className="font-semibold text-text">5.0</span>
+            </div>
+            <Button
+              variant="primary"
+              size="sm"
+              href="https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869"
+              external
+            >
+              Download
+            </Button>
+          </div>
         </div>
       </motion.header>
 
@@ -68,18 +74,28 @@ export default function Home() {
               <p className="text-xl md:text-2xl text-secondary-text mb-8 leading-relaxed">
                 Experience journaling with deep AI insights that genuinely get you. Private, personal, and profound.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  href="https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869"
-                  external
-                >
-                  Download on App Store
-                </Button>
-                <Button variant="outline" size="lg" href="#features">
-                  Learn More
-                </Button>
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    href="https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869"
+                    external
+                  >
+                    Download on App Store
+                  </Button>
+                  <Button variant="outline" size="lg" href="#features">
+                    Learn More
+                  </Button>
+                </div>
+                <div className="flex items-center gap-2 justify-center md:justify-start text-sm text-secondary-text">
+                  <div className="flex items-center gap-1">
+                    <span className="text-yellow-500 text-lg">★★★★★</span>
+                    <span className="font-semibold text-text ml-1">5.0</span>
+                  </div>
+                  <span>·</span>
+                  <span>16 reviews</span>
+                </div>
               </div>
             </motion.div>
 
@@ -94,9 +110,12 @@ export default function Home() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="absolute left-0 md:left-0 top-[30px] md:top-[60px] z-10"
                   >
-                    <img
+                    <Image
                       src="/screenshots/text-or-voice.webp"
-                      alt="Voice or Text Journaling"
+                      alt="Elora voice journaling interface showing microphone and text input options for flexible journaling"
+                      width={220}
+                      height={440}
+                      priority
                       className="h-[240px] md:h-[440px] w-auto max-w-none rounded-2xl md:rounded-3xl shadow-2xl"
                     />
                   </motion.div>
@@ -108,9 +127,12 @@ export default function Home() {
                     transition={{ duration: 0.8, delay: 0.3 }}
                     className="absolute left-[120px] md:left-[187px] top-[60px] md:top-0 z-20"
                   >
-                    <img
+                    <Image
                       src="/screenshots/grow.webp"
-                      alt="Track Your Growth with Elora"
+                      alt="Elora AI insights and personal growth tracking dashboard showing patterns, emotional trends, and progress over time"
+                      width={270}
+                      height={540}
+                      priority
                       className="h-[290px] md:h-[540px] w-auto max-w-none rounded-2xl md:rounded-3xl shadow-2xl"
                     />
                   </motion.div>
@@ -122,9 +144,12 @@ export default function Home() {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="absolute left-[265px] md:left-[420px] top-[40px] md:top-[100px] z-10"
                   >
-                    <img
+                    <Image
                       src="/screenshots/simply-fun.webp"
-                      alt="Beautiful Journaling Experience"
+                      alt="Beautiful Elora journaling app interface with elegant design and smooth user experience"
+                      width={190}
+                      height={380}
+                      priority
                       className="h-[220px] md:h-[380px] w-auto max-w-none rounded-2xl md:rounded-3xl shadow-2xl"
                     />
                   </motion.div>
@@ -310,6 +335,7 @@ export default function Home() {
           <ScreenshotShowcase
             imageSrc="/screenshots/start-with-one.webp"
             title="Start with just one thought"
+            alt="Elora simple journaling start screen with minimal interface encouraging first journal entry"
             description="No pressure, no expectations. Begin your journey with a single entry. Elora makes it easy to start and even easier to keep going."
             reverse={false}
             index={0}
@@ -317,6 +343,7 @@ export default function Home() {
           <ScreenshotShowcase
             imageSrc="/screenshots/text-or-voice.webp"
             title="Express yourself your way"
+            alt="Elora voice and text journaling options showing microphone for voice recording and keyboard for typing"
             description="Whether you prefer to type or speak, Elora adapts to you. Voice journaling feels like talking to a trusted friend who truly listens."
             reverse={true}
             index={1}
@@ -324,6 +351,7 @@ export default function Home() {
           <ScreenshotShowcase
             imageSrc="/screenshots/ask-and-reflect.webp"
             title="Guided prompts that matter"
+            alt="Elora AI-powered reflection prompts and thoughtful questions for guided journaling and self-discovery"
             description="When you're not sure what to write, Elora asks thoughtful questions that help you explore what's really on your mind."
             reverse={false}
             index={2}
@@ -331,6 +359,7 @@ export default function Home() {
           <ScreenshotShowcase
             imageSrc="/screenshots/simply-fun.webp"
             title="Journaling that feels good"
+            alt="Elora beautiful journaling interface with elegant design, smooth animations, and delightful user experience"
             description="Beautiful, intuitive design that makes reflection a joy, not a chore. You'll actually look forward to opening Elora each day."
             reverse={true}
             index={3}
@@ -338,6 +367,7 @@ export default function Home() {
           <ScreenshotShowcase
             imageSrc="/screenshots/grow.webp"
             title="Track meaningful progress"
+            alt="Elora personal growth tracking dashboard displaying AI insights, emotional patterns, and progress visualization over time"
             description="See your growth over time with insights that show patterns, progress, and breakthroughs. Your journey visualized."
             reverse={false}
             index={4}
@@ -345,6 +375,7 @@ export default function Home() {
           <ScreenshotShowcase
             imageSrc="/screenshots/safe.webp"
             title="Your thoughts, your space"
+            alt="Elora private journal with end-to-end encryption, local device storage, and complete data privacy protection"
             description="Complete privacy and security. Your journal entries are encrypted and stay on your device. No cloud sync means no data breaches."
             reverse={true}
             index={5}
@@ -428,7 +459,7 @@ export default function Home() {
             </h2>
 
             <p className="text-lg text-secondary-text leading-relaxed mb-6">
-              In an age where self-awareness and personal growth have become essential for mental wellness, traditional journaling methods often fall short. That's where <strong>Elora</strong>, an innovative AI-powered journal app, transforms the landscape of personal reflection and emotional intelligence.
+              In an age where self-awareness and personal growth have become essential for mental wellness, traditional journaling methods often fall short. That's where <strong>Elora</strong>, an innovative <a href="#features" className="text-primary hover:underline">AI-powered journal app</a>, transforms the landscape of personal reflection and emotional intelligence.
             </p>
 
             <h3 className="text-2xl font-bold text-text mt-8 mb-4">
@@ -436,11 +467,11 @@ export default function Home() {
             </h3>
 
             <p className="text-lg text-secondary-text leading-relaxed mb-6">
-              While pen-and-paper journaling has been a cornerstone of self-reflection for centuries, <strong>AI journaling apps for personal growth</strong> offer unprecedented advantages. Elora combines the intimacy of traditional journaling with cutting-edge artificial intelligence to provide insights that would take years to discover on your own.
+              While pen-and-paper journaling has been a cornerstone of self-reflection for centuries, <strong>AI journaling apps for personal growth</strong> offer unprecedented advantages. Elora combines the intimacy of traditional journaling with cutting-edge artificial intelligence to provide <a href="#features" className="text-primary hover:underline">insights that genuinely understand you</a>.
             </p>
 
             <p className="text-lg text-secondary-text leading-relaxed mb-6">
-              Unlike generic journal prompts or basic diary apps, Elora's <strong>emotionally intelligent AI</strong> learns your unique patterns, communication style, and emotional landscape. It's like having a deeply perceptive friend who remembers every conversation and can help you connect dots you never saw before.
+              Unlike generic journal prompts or basic diary apps, Elora's <strong>emotionally intelligent AI</strong> learns your unique patterns, communication style, and emotional landscape. It's like having a deeply perceptive friend who remembers every conversation and can help you connect dots you never saw before. Learn more about <a href="/privacy-policy" className="text-primary hover:underline">how we protect your privacy</a> while delivering these powerful insights.
             </p>
 
             <h3 className="text-2xl font-bold text-text mt-8 mb-4">
@@ -464,11 +495,11 @@ export default function Home() {
             </h3>
 
             <p className="text-lg text-secondary-text leading-relaxed mb-6">
-              What sets Elora apart from other <strong>mindfulness and mental health apps</strong> is the depth of its AI understanding. The insights aren't generic motivational quotes or surface-level observations. Elora genuinely gets to know you—your values, your struggles, your growth patterns. Over time, it becomes an invaluable tool for <strong>self-discovery and emotional wellness</strong>.
+              What sets Elora apart from other <strong>mindfulness and mental health apps</strong> is the depth of its AI understanding. The insights aren't generic motivational quotes or surface-level observations. Elora genuinely gets to know you—your values, your struggles, your growth patterns. Over time, it becomes an invaluable tool for <strong>self-discovery and emotional wellness</strong>. Explore our <a href="#features" className="text-primary hover:underline">key features that make journaling transformative</a>.
             </p>
 
             <p className="text-lg text-secondary-text leading-relaxed mb-6">
-              Whether you're navigating life transitions, working on personal development, processing emotions, or simply seeking greater self-awareness, Elora provides the support and insight you need. It's not just a journal—it's a companion for your most important journey: understanding yourself.
+              Whether you're navigating life transitions, working on personal development, processing emotions, or simply seeking greater self-awareness, Elora provides the support and insight you need. It's not just a journal—it's a companion for your most important journey: understanding yourself. Read our <a href="/support" className="text-primary hover:underline">support guide</a> to get started.
             </p>
 
             <h3 className="text-2xl font-bold text-text mt-8 mb-4">
@@ -476,7 +507,7 @@ export default function Home() {
             </h3>
 
             <p className="text-lg text-secondary-text leading-relaxed">
-              Join thousands of people who have transformed their lives through consistent, meaningful reflection with Elora. Download the app today and experience the difference that truly intelligent, deeply private, emotionally aware journaling can make in your life.
+              Join thousands of people who have transformed their lives through consistent, meaningful reflection with Elora. <a href="https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869" className="text-primary hover:underline font-semibold">Download the app today</a> and experience the difference that truly intelligent, deeply private, emotionally aware journaling can make in your life. Check our <a href="/terms" className="text-primary hover:underline">terms of service</a> and <a href="/privacy-policy" className="text-primary hover:underline">privacy policy</a> to learn more about our commitment to your privacy.
             </p>
           </article>
         </div>
@@ -546,6 +577,7 @@ export default function Home() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col items-center gap-4"
           >
             <Button
               variant="primary"
@@ -555,6 +587,14 @@ export default function Home() {
             >
               Download Elora Now
             </Button>
+            <div className="flex items-center gap-2 text-sm text-secondary-text">
+              <div className="flex items-center gap-1">
+                <span className="text-yellow-500 text-lg">★★★★★</span>
+                <span className="font-semibold text-text ml-1">5.0</span>
+              </div>
+              <span>·</span>
+              <span>16 reviews</span>
+            </div>
           </motion.div>
         </div>
       </section>

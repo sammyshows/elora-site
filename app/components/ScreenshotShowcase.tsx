@@ -1,12 +1,14 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 interface ScreenshotShowcaseProps {
   imageSrc: string;
   title: string;
   description: string;
+  alt?: string;
   reverse?: boolean;
   index?: number;
   className?: string;
@@ -16,6 +18,7 @@ export default function ScreenshotShowcase({
   imageSrc,
   title,
   description,
+  alt,
   reverse = false,
   index = 0,
   className = '',
@@ -34,9 +37,12 @@ export default function ScreenshotShowcase({
         transition={{ duration: 0.3 }}
         className="w-full md:w-1/2 flex justify-center"
       >
-        <img
+        <Image
           src={imageSrc}
-          alt={title}
+          alt={alt || title}
+          width={300}
+          height={600}
+          loading="lazy"
           className="h-[500px] md:h-[600px] w-auto max-w-none rounded-3xl shadow-2xl"
         />
       </motion.div>
