@@ -12,6 +12,7 @@ import ScreenshotShowcase from './components/ScreenshotShowcase';
 import AnimatedSection from './components/AnimatedSection';
 import GradientShimmer from './components/GradientShimmer';
 import FAQSection from './components/FAQSection';
+import DownloadButtons from './components/DownloadButtons';
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,18 +41,13 @@ export default function Home() {
             <span className="text-2xl font-bold text-text">Elora</span>
           </div>
           <div className="flex items-center gap-4">
-            <div className="hidden md:flex items-center gap-1 text-sm">
+            <div className="hidden lg:flex items-center gap-1 text-sm">
               <span className="text-yellow-500">★★★★★</span>
               <span className="font-semibold text-text">5.0</span>
             </div>
-            <Button
-              variant="primary"
-              size="sm"
-              href="https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869"
-              external
-            >
-              Download
-            </Button>
+            <div className="hidden md:block">
+              <DownloadButtons layout="horizontal" />
+            </div>
           </div>
         </div>
       </motion.header>
@@ -75,26 +71,14 @@ export default function Home() {
                 Experience journaling with deep AI insights that genuinely get you. Private, personal, and profound.
               </p>
               <div className="flex flex-col gap-4">
-                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                  <Button
-                    variant="primary"
-                    size="lg"
-                    href="https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869"
-                    external
-                  >
-                    Download on App Store
-                  </Button>
-                  <Button variant="outline" size="lg" href="#features">
-                    Learn More
-                  </Button>
-                </div>
+                <DownloadButtons layout="horizontal" />
                 <div className="flex items-center gap-2 justify-center md:justify-start text-sm text-secondary-text">
                   <div className="flex items-center gap-1">
                     <span className="text-yellow-500 text-lg">★★★★★</span>
                     <span className="font-semibold text-text ml-1">5.0</span>
                   </div>
                   <span>·</span>
-                  <span>16 reviews</span>
+                  <span>18 reviews</span>
                 </div>
               </div>
             </motion.div>
@@ -579,14 +563,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col items-center gap-4"
           >
-            <Button
-              variant="primary"
-              size="lg"
-              href="https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869"
-              external
-            >
-              Download Elora Now
-            </Button>
+            <DownloadButtons layout="horizontal" />
             <div className="flex items-center gap-2 text-sm text-secondary-text">
               <div className="flex items-center gap-1">
                 <span className="text-yellow-500 text-lg">★★★★★</span>
