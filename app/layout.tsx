@@ -103,17 +103,19 @@ export default function RootLayout({
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5.0",
-          "ratingCount": "16",
+          "ratingCount": "18",
           "bestRating": "5",
           "worstRating": "1"
         },
         "description": "Elora is a voice-first, emotionally intelligent AI journaling app that provides deep insights for personal growth. Features include voice journaling, text journaling, AI-powered insights, pattern recognition, timeline visualization, and the Explore feature for chatting with your journal history. Completely private with end-to-end encryption.",
         "downloadUrl": "https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869",
         "screenshot": [
-          "https://elora.day/screenshots/hero.webp",
-          "https://elora.day/screenshots/text-or-voice.webp",
-          "https://elora.day/screenshots/grow.webp",
-          "https://elora.day/screenshots/safe.webp"
+          "https://elora.day/screenshots/explore-prompt.webp",
+          "https://elora.day/screenshots/insights.webp",
+          "https://elora.day/screenshots/powerful-insight.webp",
+          "https://elora.day/screenshots/entry-view.webp",
+          "https://elora.day/screenshots/explore-response.webp",
+          "https://elora.day/screenshots/timeline-view.webp",
         ],
         "featureList": [
           "Voice journaling with natural speech recognition",

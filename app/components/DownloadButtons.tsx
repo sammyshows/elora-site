@@ -17,13 +17,13 @@ export default function DownloadButtons({
   const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.elora.ai';
 
   const containerClass = layout === 'horizontal'
-    ? 'flex flex-row gap-3 sm:gap-4 items-center justify-center md:justify-start flex-wrap'
-    : 'flex flex-col gap-3 items-center md:items-start';
+    ? 'flex flex-col xl:flex-row gap-4 items-center justify-center xl:justify-start'
+    : 'flex flex-col gap-4 items-center xl:items-start';
 
   return (
     <div className={`${containerClass} ${className}`}>
       {showLabels && (
-        <p className="w-full text-sm text-secondary-text text-center md:text-left mb-1">
+        <p className="w-full text-sm text-secondary-text text-center xl:text-left mb-1">
           Download now:
         </p>
       )}
@@ -41,7 +41,7 @@ export default function DownloadButtons({
           alt="Download on the App Store"
           width={120}
           height={40}
-          className="h-auto w-auto"
+          className="h-auto w-[180px] xl:w-[120px]"
           priority
           unoptimized
         />
@@ -60,7 +60,7 @@ export default function DownloadButtons({
           alt="Get it on Google Play"
           width={135}
           height={40}
-          className="w-auto"
+          className="h-auto w-[180px] xl:w-[135px]"
           priority
           unoptimized
         />

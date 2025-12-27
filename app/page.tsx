@@ -41,11 +41,11 @@ export default function Home() {
             <span className="text-2xl font-bold text-text">Elora</span>
           </div>
           <div className="flex items-center gap-4">
-            <div className="hidden lg:flex items-center gap-1 text-sm">
+            <div className="hidden 2xl:flex items-center gap-1 text-sm">
               <span className="text-yellow-500">★★★★★</span>
               <span className="font-semibold text-text">5.0</span>
             </div>
-            <div className="hidden md:block">
+            <div className="hidden xl:block">
               <DownloadButtons layout="horizontal" />
             </div>
           </div>
@@ -55,24 +55,56 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 overflow-x-hidden">
         <GradientShimmer />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 xl:py-24">
+          <div className="flex flex-col xl:flex-row items-center gap-8 xl:gap-16">
             {/* Hero Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="flex-1 text-center md:text-left"
-            >
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-text mb-6 leading-tight">
+            <div className="flex-1 text-center xl:text-left flex flex-col">
+              <motion.h1
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-text mb-4 xl:mb-8 leading-tight order-1"
+              >
                 Your journal that <span className="text-primary">truly understands</span> you
-              </h1>
-              <p className="text-xl md:text-2xl text-secondary-text mb-8 leading-relaxed">
+              </motion.h1>
+
+              {/* Hero Screenshot - Shows on mobile/tablet/laptop after heading */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="xl:hidden order-2 mb-6"
+              >
+                <div className="relative w-full max-w-md mx-auto my-4 px-4 sm:px-0">
+                  <Image
+                    src="/hero.webp"
+                    alt="Elora journal app interface showing AI insights, voice journaling, and personal growth tracking features"
+                    width={800}
+                    height={600}
+                    priority
+                    className="w-full h-auto rounded-2xl relative z-10"
+                  />
+                  <div className="absolute bottom-0 left-[10%] right-[10%] h-8 bg-black/20 blur-2xl -z-10 translate-y-4"></div>
+                </div>
+              </motion.div>
+
+              <motion.p
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                className="text-xl xl:text-2xl text-secondary-text mb-8 leading-relaxed hidden xl:block order-3"
+              >
                 Experience journaling with deep AI insights that genuinely get you. Private, personal, and profound.
-              </p>
-              <div className="flex flex-col gap-4">
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="flex flex-col gap-4 order-3 xl:order-4"
+              >
                 <DownloadButtons layout="horizontal" />
-                <div className="flex items-center gap-2 justify-center md:justify-start text-sm text-secondary-text">
+                <div className="flex items-center gap-2 justify-center xl:justify-start text-sm text-secondary-text">
                   <div className="flex items-center gap-1">
                     <span className="text-yellow-500 text-lg">★★★★★</span>
                     <span className="font-semibold text-text ml-1">5.0</span>
@@ -80,66 +112,38 @@ export default function Home() {
                   <span>·</span>
                   <span>18 reviews</span>
                 </div>
+              </motion.div>
+
+              {/* Subtitle - Shows on mobile/tablet/laptop after reviews */}
+              <motion.p
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="text-lg text-secondary-text mt-6 leading-relaxed xl:hidden order-4"
+              >
+                Experience journaling with deep AI insights that genuinely get you. Private, personal, and profound.
+              </motion.p>
+            </div>
+
+            {/* Hero Screenshot - Shows on large desktop only */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="hidden xl:flex flex-1 justify-center items-center"
+            >
+              <div className="relative w-full max-w-2xl">
+                <Image
+                  src="/hero.webp"
+                  alt="Elora journal app interface showing AI insights, voice journaling, and personal growth tracking features"
+                  width={800}
+                  height={600}
+                  priority
+                  className="w-full h-auto rounded-2xl xl:rounded-3xl relative z-10"
+                />
+                <div className="absolute bottom-0 left-[10%] right-[10%] h-8 bg-black/20 blur-2xl -z-10 translate-y-4"></div>
               </div>
             </motion.div>
-
-            {/* Hero Screenshots - Three Overlapping */}
-            <div className="flex-1 flex justify-center items-center overflow-x-auto md:overflow-visible">
-              <div className="relative w-full h-[350px] md:h-[600px] flex justify-center md:justify-start">
-                <div className="relative w-[370px] md:w-full h-full">
-                  {/* Left Screenshot - Text or Voice */}
-                  <motion.div
-                    initial={{ opacity: 0, x: -50, y: 20 }}
-                    animate={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="absolute left-0 md:left-0 top-[30px] md:top-[60px] z-10"
-                  >
-                    <Image
-                      src="/screenshots/text-or-voice.webp"
-                      alt="Elora voice journaling interface showing microphone and text input options for flexible journaling"
-                      width={220}
-                      height={440}
-                      priority
-                      className="h-[240px] md:h-[440px] w-auto max-w-none rounded-2xl md:rounded-3xl shadow-2xl"
-                    />
-                  </motion.div>
-
-                  {/* Center Screenshot - Grow (Featured) */}
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
-                    className="absolute left-[120px] md:left-[187px] top-[60px] md:top-0 z-20"
-                  >
-                    <Image
-                      src="/screenshots/grow.webp"
-                      alt="Elora AI insights and personal growth tracking dashboard showing patterns, emotional trends, and progress over time"
-                      width={270}
-                      height={540}
-                      priority
-                      className="h-[290px] md:h-[540px] w-auto max-w-none rounded-2xl md:rounded-3xl shadow-2xl"
-                    />
-                  </motion.div>
-
-                  {/* Right Screenshot - Simply Fun */}
-                  <motion.div
-                    initial={{ opacity: 0, x: 50, y: 30 }}
-                    animate={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className="absolute left-[265px] md:left-[420px] top-[40px] md:top-[100px] z-10"
-                  >
-                    <Image
-                      src="/screenshots/simply-fun.webp"
-                      alt="Beautiful Elora journaling app interface with elegant design and smooth user experience"
-                      width={190}
-                      height={380}
-                      priority
-                      className="h-[220px] md:h-[380px] w-auto max-w-none rounded-2xl md:rounded-3xl shadow-2xl"
-                    />
-                  </motion.div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -317,7 +321,7 @@ export default function Home() {
       <AnimatedSection background="bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 md:space-y-32 overflow-hidden">
           <ScreenshotShowcase
-            imageSrc="/screenshots/start-with-one.webp"
+            imageSrc="/screenshots/entry-view.webp"
             title="Start with just one thought"
             alt="Elora simple journaling start screen with minimal interface encouraging first journal entry"
             description="No pressure, no expectations. Begin your journey with a single entry. Elora makes it easy to start and even easier to keep going."
@@ -325,7 +329,7 @@ export default function Home() {
             index={0}
           />
           <ScreenshotShowcase
-            imageSrc="/screenshots/text-or-voice.webp"
+            imageSrc="/screenshots/powerful-insight.webp"
             title="Express yourself your way"
             alt="Elora voice and text journaling options showing microphone for voice recording and keyboard for typing"
             description="Whether you prefer to type or speak, Elora adapts to you. Voice journaling feels like talking to a trusted friend who truly listens."
@@ -333,7 +337,7 @@ export default function Home() {
             index={1}
           />
           <ScreenshotShowcase
-            imageSrc="/screenshots/ask-and-reflect.webp"
+            imageSrc="/screenshots/explore-prompt.webp"
             title="Guided prompts that matter"
             alt="Elora AI-powered reflection prompts and thoughtful questions for guided journaling and self-discovery"
             description="When you're not sure what to write, Elora asks thoughtful questions that help you explore what's really on your mind."
@@ -341,7 +345,7 @@ export default function Home() {
             index={2}
           />
           <ScreenshotShowcase
-            imageSrc="/screenshots/simply-fun.webp"
+            imageSrc="/screenshots/explore-response.webp"
             title="Journaling that feels good"
             alt="Elora beautiful journaling interface with elegant design, smooth animations, and delightful user experience"
             description="Beautiful, intuitive design that makes reflection a joy, not a chore. You'll actually look forward to opening Elora each day."
@@ -349,7 +353,7 @@ export default function Home() {
             index={3}
           />
           <ScreenshotShowcase
-            imageSrc="/screenshots/grow.webp"
+            imageSrc="/screenshots/insights.webp"
             title="Track meaningful progress"
             alt="Elora personal growth tracking dashboard displaying AI insights, emotional patterns, and progress visualization over time"
             description="See your growth over time with insights that show patterns, progress, and breakthroughs. Your journey visualized."
@@ -357,7 +361,7 @@ export default function Home() {
             index={4}
           />
           <ScreenshotShowcase
-            imageSrc="/screenshots/safe.webp"
+            imageSrc="/screenshots/timeline-view.webp"
             title="Your thoughts, your space"
             alt="Elora private journal with end-to-end encryption, local device storage, and complete data privacy protection"
             description="Complete privacy and security. Your journal entries are encrypted and stay on your device. No cloud sync means no data breaches."
@@ -570,7 +574,7 @@ export default function Home() {
                 <span className="font-semibold text-text ml-1">5.0</span>
               </div>
               <span>·</span>
-              <span>16 reviews</span>
+              <span>18 reviews</span>
             </div>
           </motion.div>
         </div>
