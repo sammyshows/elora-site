@@ -23,7 +23,7 @@ export default function Privacy() {
         marginBottom: '40px',
         fontStyle: 'italic'
       }}>
-        Last updated: 26 September 2025
+        Last updated: 7 February 2026
       </p>
 
       <div style={{
@@ -46,7 +46,7 @@ export default function Privacy() {
         </p>
         <p style={{ marginBottom: '16px' }}>
           <strong>Data Controller:</strong> Samuel McCarthy<br/>
-          <strong>Contact Email:</strong> <a href="mailto:samrmccarthy6@gmail.com" style={{ color: '#007bff', textDecoration: 'none' }}>samrmccarthy6@gmail.com</a>
+          <strong>Contact Email:</strong> <a href="mailto:samrmccarthy6@gmail.com" style={{ color: 'var(--foreground)', textDecoration: 'none' }}>samrmccarthy6@gmail.com</a>
         </p>
         <p style={{ margin: 0 }}>
           This Privacy Policy explains what information we collect, how we use it, and the rights you have. If you do not agree with this Policy, please do not use the App.
@@ -59,7 +59,7 @@ export default function Privacy() {
           marginBottom: '16px',
           color: 'var(--foreground)',
           fontWeight: '600',
-          borderBottom: '2px solid #e9ecef',
+          borderBottom: '2px solid var(--border)',
           paddingBottom: '8px'
         }}>
           2. Information We Collect
@@ -87,6 +87,9 @@ export default function Privacy() {
             <strong>Account Data</strong> – if you choose to sign up, we collect your email address and authentication tokens via Supabase Auth (email/password or OAuth).
           </li>
           <li style={{ marginBottom: '12px' }}>
+            <strong>Subscription Data</strong> – purchase receipts and subscription status (via RevenueCat). We do <strong>not</strong> collect or store your credit card numbers or banking details.
+          </li>
+          <li style={{ marginBottom: '12px' }}>
             <strong>App Usage Data</strong> – aggregated feature-use metrics to help improve the user experience (only if enabled; no advertising identifiers).
           </li>
         </ul>
@@ -98,7 +101,7 @@ export default function Privacy() {
           marginTop: '16px'
         }}>
           <p style={{ margin: 0, color: 'var(--foreground)' }}>
-            <strong>We do not collect</strong> precise location, contact lists, or advertising IDs. We do not show ads.
+            <strong>We do not collect</strong> precise location, contact lists, financial account numbers, or advertising IDs. We do not show ads.
           </p>
         </div>
       </section>
@@ -109,7 +112,7 @@ export default function Privacy() {
           marginBottom: '16px',
           color: 'var(--foreground)',
           fontWeight: '600',
-          borderBottom: '2px solid #e9ecef',
+          borderBottom: '2px solid var(--border)',
           paddingBottom: '8px'
         }}>
           3. How We Use Your Information
@@ -122,7 +125,7 @@ export default function Privacy() {
           <li style={{ marginBottom: '8px' }}>Providing AI-generated summaries, themes, and insights</li>
           <li style={{ marginBottom: '8px' }}>Creating your personal graph visualization ("Soul Map")</li>
           <li style={{ marginBottom: '8px' }}>Storing entries securely and syncing across devices</li>
-          <li style={{ marginBottom: '8px' }}>Running background analysis jobs (e.g., profile regeneration based on journaling volume)</li>
+          <li style={{ marginBottom: '8px' }}>Managing your subscription status (Premium features) across iOS/Android</li>
           <li style={{ marginBottom: '8px' }}>Managing authentication and account security</li>
           <li style={{ marginBottom: '8px' }}>Improving functionality, reliability, and fixing issues</li>
         </ul>
@@ -246,7 +249,17 @@ export default function Privacy() {
             textAlign: 'center'
           }}>
             <strong>OpenAI (GPT-4.1 Mini)</strong><br/>
-            <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>Prompts, contextual insights & reflection suggestions</span>
+            <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>Prompts, contextual insights & chat</span>
+          </div>
+          <div style={{
+            background: 'var(--background)',
+            border: '1px solid var(--border)',
+            borderRadius: '6px',
+            padding: '16px',
+            textAlign: 'center'
+          }}>
+            <strong>RevenueCat</strong><br/>
+            <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>Subscription validation & purchase history</span>
           </div>
           <div style={{
             background: 'var(--background)',
@@ -257,16 +270,6 @@ export default function Privacy() {
           }}>
             <strong>Supabase</strong><br/>
             <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>User authentication & session management</span>
-          </div>
-          <div style={{
-            background: 'var(--background)',
-            border: '1px solid var(--border)',
-            borderRadius: '6px',
-            padding: '16px',
-            textAlign: 'center'
-          }}>
-            <strong>Railway</strong><br/>
-            <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>Managed hosting for backend database & infrastructure</span>
           </div>
         </div>
         <div style={{
@@ -390,7 +393,7 @@ export default function Privacy() {
           </div>
         </div>
         <p>
-          To exercise these rights, email <a href="mailto:samrmccarthy6@gmail.com" style={{ color: '#007bff', textDecoration: 'none' }}>samrmccarthy6@gmail.com</a>. We will verify your identity and respond within applicable legal timeframes.
+          To exercise these rights, email <a href="mailto:samrmccarthy6@gmail.com" style={{ color: 'var(--foreground)', textDecoration: 'none' }}>samrmccarthy6@gmail.com</a>. We will verify your identity and respond within applicable legal timeframes.
         </p>
       </section>
 
@@ -432,7 +435,7 @@ export default function Privacy() {
             flex: '1',
             minWidth: '200px'
           }}>
-            <strong>Email:</strong> <a href="mailto:samrmccarthy6@gmail.com" style={{ color: '#856404', textDecoration: 'none' }}>samrmccarthy6@gmail.com</a> with subject "Delete My Account"
+            <strong>Email:</strong> <a href="mailto:samrmccarthy6@gmail.com" style={{ color: 'var(--foreground)', textDecoration: 'none' }}>samrmccarthy6@gmail.com</a> with subject "Delete My Account"
           </div>
         </div>
         <p>
@@ -505,7 +508,7 @@ export default function Privacy() {
             borderRadius: '6px',
             padding: '12px'
           }}>
-            <strong>Contract</strong> – to provide the App's core services you request
+            <strong>Contract</strong> – to provide the App's core services and premium subscriptions you request
           </div>
           <div style={{
             background: 'var(--background)',
@@ -547,7 +550,7 @@ export default function Privacy() {
           padding: '16px'
         }}>
           <p style={{ margin: 0, color: 'var(--foreground)' }}>
-            <strong>Elora is not intended for children under 16.</strong> We do not knowingly collect data from children. If you believe a child has provided personal data, contact us and we will delete it promptly.
+            <strong>Elora is not intended for children under 18.</strong> We do not knowingly collect data from children. If you believe a child has provided personal data, contact us and we will delete it promptly.
           </p>
         </div>
       </section>

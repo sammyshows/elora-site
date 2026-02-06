@@ -23,7 +23,7 @@ export default function Terms() {
         marginBottom: '40px',
         fontStyle: 'italic'
       }}>
-        Last updated: 26 September 2025
+        Last updated: 7 February 2026
       </p>
 
       <div style={{
@@ -72,7 +72,7 @@ export default function Terms() {
           marginBottom: '16px'
         }}>
           <p style={{ margin: 0, color: 'var(--foreground)' }}>
-            <strong>You must be at least 16 years old to use Elora.</strong>
+            <strong>You must be at least 18 years old to use Elora.</strong>
           </p>
         </div>
         <p>
@@ -106,10 +106,10 @@ export default function Terms() {
             padding: '16px'
           }}>
             <h3 style={{ fontSize: '16px', marginBottom: '8px', fontWeight: '600', color: 'var(--foreground)' }}>
-              Voice Journaling
+              Journaling & Visualization
             </h3>
             <p style={{ margin: 0, fontSize: '14px', color: 'var(--foreground)' }}>
-              Record entries via your microphone
+              Voice/Text entry, graph visualization ("Soul Map"), and pattern recognition.
             </p>
           </div>
           <div style={{
@@ -119,49 +119,10 @@ export default function Terms() {
             padding: '16px'
           }}>
             <h3 style={{ fontSize: '16px', marginBottom: '8px', fontWeight: '600', color: 'var(--foreground)' }}>
-              Text Journaling
+              AI "Explore" Chat
             </h3>
             <p style={{ margin: 0, fontSize: '14px', color: 'var(--foreground)' }}>
-              Write entries manually
-            </p>
-          </div>
-          <div style={{
-            background: 'var(--background)',
-            border: '1px solid var(--border)',
-            borderRadius: '6px',
-            padding: '16px'
-          }}>
-            <h3 style={{ fontSize: '16px', marginBottom: '8px', fontWeight: '600', color: 'var(--foreground)' }}>
-              AI Summarization
-            </h3>
-            <p style={{ margin: 0, fontSize: '14px', color: 'var(--foreground)' }}>
-              Entries may be processed by Anthropic's Claude and OpenAI's GPT-4.1 Mini to generate summaries, themes, and reflections
-            </p>
-          </div>
-          <div style={{
-            background: 'var(--background)',
-            border: '1px solid var(--border)',
-            borderRadius: '6px',
-            padding: '16px'
-          }}>
-            <h3 style={{ fontSize: '16px', marginBottom: '8px', fontWeight: '600', color: 'var(--foreground)' }}>
-              AI Insight Engine
-            </h3>
-            <p style={{ margin: 0, fontSize: '14px', color: 'var(--foreground)' }}>
-              Prompts, suggestions, and pattern recognition
-            </p>
-          </div>
-          <div style={{
-            background: 'var(--background)',
-            border: '1px solid var(--border)',
-            borderRadius: '6px',
-            padding: '16px'
-          }}>
-            <h3 style={{ fontSize: '16px', marginBottom: '8px', fontWeight: '600', color: 'var(--foreground)' }}>
-              Graph Visualization ("Soul Map")
-            </h3>
-            <p style={{ margin: 0, fontSize: '14px', color: 'var(--foreground)' }}>
-              Mapping emotional and behavioral patterns
+              An interactive chat interface powered by Large Language Models (LLMs) for reflective conversation.
             </p>
           </div>
           <div style={{
@@ -174,33 +135,7 @@ export default function Terms() {
               Offline-First Storage
             </h3>
             <p style={{ margin: 0, fontSize: '14px', color: 'var(--foreground)' }}>
-              Entries saved locally via expo-sqlite, then synced securely to PostgreSQL (Railway)
-            </p>
-          </div>
-          <div style={{
-            background: 'var(--background)',
-            border: '1px solid var(--border)',
-            borderRadius: '6px',
-            padding: '16px'
-          }}>
-            <h3 style={{ fontSize: '16px', marginBottom: '8px', fontWeight: '600', color: 'var(--foreground)' }}>
-              User Accounts (Optional)
-            </h3>
-            <p style={{ margin: 0, fontSize: '14px', color: 'var(--foreground)' }}>
-              Create an account with email/password or SSO (Google, Apple, etc.) via Supabase Auth
-            </p>
-          </div>
-          <div style={{
-            background: 'var(--background)',
-            border: '1px solid var(--border)',
-            borderRadius: '6px',
-            padding: '16px'
-          }}>
-            <h3 style={{ fontSize: '16px', marginBottom: '8px', fontWeight: '600', color: 'var(--foreground)' }}>
-              Embeddings
-            </h3>
-            <p style={{ margin: 0, fontSize: '14px', color: 'var(--foreground)' }}>
-              Summaries may be converted into embeddings for semantic search and pattern detection
+              Entries saved locally via expo-sqlite, then synced securely to our database when online.
             </p>
           </div>
         </div>
@@ -235,17 +170,13 @@ export default function Terms() {
           marginBottom: '16px'
         }}>
           <p style={{ margin: 0, color: 'var(--foreground)' }}>
-            <strong>Creating an account is optional.</strong> Without an account, you may use Elora offline, but syncing and certain features will not be available.
+            <strong>Creating an account is optional but recommended.</strong> Without an account, you may use Elora offline, but cross-device syncing and Premium features will not be available.
           </p>
         </div>
-        <p style={{ marginBottom: '16px' }}>
-          If you create an account:
-        </p>
         <ul style={{ paddingLeft: '24px', marginBottom: '0' }}>
           <li style={{ marginBottom: '8px' }}>You must provide accurate information (e.g., valid email).</li>
-          <li style={{ marginBottom: '8px' }}>You are responsible for maintaining the security of your login credentials (including SSO access).</li>
-          <li style={{ marginBottom: '8px' }}>You must notify us immediately of unauthorized access to your account.</li>
-          <li style={{ marginBottom: '8px' }}>We reserve the right to suspend or terminate accounts that violate these Terms.</li>
+          <li style={{ marginBottom: '8px' }}>You are responsible for maintaining the security of your login credentials.</li>
+          <li style={{ marginBottom: '8px' }}>We reserve the right to suspend accounts that violate these Terms.</li>
         </ul>
       </section>
 
@@ -258,7 +189,7 @@ export default function Terms() {
           borderBottom: '2px solid var(--border)',
           paddingBottom: '8px'
         }}>
-          5. User Content
+          5. User Content & Ownership
         </h2>
         <div style={{
           background: 'var(--background)',
@@ -272,12 +203,12 @@ export default function Terms() {
           </p>
         </div>
         <p style={{ marginBottom: '16px' }}>
-          By using the App, you grant us a limited license to process your content solely for:
+          By using the App, you grant us a limited, worldwide license to process your content solely for:
         </p>
         <ul style={{ paddingLeft: '24px', marginBottom: '16px' }}>
-          <li style={{ marginBottom: '8px' }}>Storing and syncing your data,</li>
-          <li style={{ marginBottom: '8px' }}>Generating summaries, insights, embeddings, and visualizations, and</li>
-          <li style={{ marginBottom: '8px' }}>Providing you with the App's features.</li>
+          <li style={{ marginBottom: '8px' }}>Storing and syncing your data securely,</li>
+          <li style={{ marginBottom: '8px' }}>Generating AI summaries, insights, embeddings, and visualizations, and</li>
+          <li style={{ marginBottom: '8px' }}>Delivering the App's features to you.</li>
         </ul>
         <p style={{
           background: 'var(--background)',
@@ -286,7 +217,7 @@ export default function Terms() {
           padding: '12px',
           margin: 0
         }}>
-          <strong>Your content is private by default and is never shared publicly or with other users.</strong>
+          <strong>Your content is private.</strong> We do not sell your journal entries to third parties or use them to train public AI models.
         </p>
       </section>
 
@@ -299,27 +230,72 @@ export default function Terms() {
           borderBottom: '2px solid var(--border)',
           paddingBottom: '8px'
         }}>
-          6. Subscriptions and Payments
+          6. Subscriptions ("Elora Premium")
         </h2>
+        <p style={{ marginBottom: '16px' }}>
+          Elora offers a subscription service called "Elora Premium" which unlocks enhanced features (e.g., unlimited Explore chat, advanced insights).
+        </p>
+
         <div style={{
           background: 'var(--background)',
           border: '1px solid var(--border)',
           borderRadius: '6px',
           padding: '16px',
-          marginBottom: '16px'
+          marginBottom: '24px'
         }}>
-          <p style={{ margin: 0, color: 'var(--foreground)' }}>
-            <strong>Elora is currently free to use.</strong> Some features may become part of a future subscription plan or one-time in-app purchases.
-          </p>
+          <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '12px', color: 'var(--foreground)' }}>
+            Billing & Auto-Renewal
+          </h3>
+          <ul style={{ paddingLeft: '24px', marginBottom: '0' }}>
+            <li style={{ marginBottom: '8px' }}>
+              <strong>Payment:</strong> Payment will be charged to your Apple ID or Google Play account at confirmation of purchase.
+            </li>
+            <li style={{ marginBottom: '8px' }}>
+              <strong>Auto-Renewal:</strong> Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period.
+            </li>
+            <li style={{ marginBottom: '8px' }}>
+              <strong>Charges:</strong> Your account will be charged for renewal within 24 hours prior to the end of the current period at the cost of the chosen package (Monthly or Annual).
+            </li>
+            <li style={{ marginBottom: '8px' }}>
+              <strong>Management:</strong> You can manage and cancel subscriptions in your device's Account Settings after purchase. We cannot cancel subscriptions for you.
+            </li>
+          </ul>
         </div>
-        <p style={{ marginBottom: '16px' }}>
-          If subscriptions are introduced:
-        </p>
-        <ul style={{ paddingLeft: '24px', marginBottom: '0' }}>
-          <li style={{ marginBottom: '8px' }}>Pricing, billing cycles, and cancellation terms will be disclosed in-app.</li>
-          <li style={{ marginBottom: '8px' }}>Apple App Store and Google Play billing rules will apply.</li>
-          <li style={{ marginBottom: '8px' }}>You will always be informed before being charged.</li>
-        </ul>
+
+        <div style={{ display: 'grid', gap: '16px', marginBottom: '24px' }}>
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              Free Trials
+            </h3>
+            <p>
+              If offered a free trial (e.g., 7 days), your subscription will automatically convert to a paid subscription at the end of the trial period unless canceled at least 24 hours before the trial ends. Unused portions of a free trial are forfeited upon purchasing a subscription.
+            </p>
+          </div>
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              Cross-Platform Access
+            </h3>
+            <p>
+              Your subscription is tied to your Elora User Account. You may access Premium features on both iOS and Android devices if you are logged into the same account.
+            </p>
+          </div>
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              Refunds
+            </h3>
+            <p>
+              All refund requests must be directed to Apple Support or Google Play Support. We do not have the ability to process refunds for in-app purchases directly.
+            </p>
+          </div>
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              Price Changes
+            </h3>
+            <p>
+              We reserve the right to adjust pricing for our service or any components thereof. Any price changes will take effect following notice to you, usually via the App Store/Google Play notification system.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section style={{ marginBottom: '32px' }}>
@@ -331,10 +307,75 @@ export default function Terms() {
           borderBottom: '2px solid var(--border)',
           paddingBottom: '8px'
         }}>
-          7. Third-Party Services
+          7. AI Features & "Explore" Chat Liability
+        </h2>
+        <div style={{
+          border: '2px solid #eab308', 
+          background: 'rgba(234, 179, 8, 0.1)',
+          borderRadius: '8px',
+          padding: '20px',
+          marginBottom: '24px'
+        }}>
+          <p style={{ margin: 0, fontWeight: '600', color: 'var(--foreground)' }}>
+            Elora utilizes Artificial Intelligence (AI) to generate responses. By using the "Explore" chat or AI features, you explicitly acknowledge and agree to the following:
+          </p>
+        </div>
+
+        <div style={{ display: 'grid', gap: '20px' }}>
+          <div>
+            <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              A. I Am Code, Not Human
+            </h3>
+            <p>
+              Elora is a software program utilizing Large Language Models. It does not have feelings, consciousness, a physical body, or independent agency. It cannot "love" you, "miss" you, or form a genuine human relationship. Any appearance of emotion is a simulated response designed to be supportive.
+            </p>
+          </div>
+
+          <div>
+            <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              B. Not Medical or Professional Advice
+            </h3>
+            <p>
+              <strong>ELORA IS NOT A DOCTOR, THERAPIST, LAWYER, OR FINANCIAL ADVISOR.</strong>
+            </p>
+            <p>
+              The App is a self-reflection tool. It cannot diagnose mental health conditions, treat illness, or provide legal/investment advice. Do not make health, financial, or safety decisions based solely on AI responses.
+            </p>
+          </div>
+
+          <div>
+            <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              C. No Crisis Support
+            </h3>
+            <p>
+              Elora is not equipped to handle emergencies. If you are in danger, contemplating self-harm, or experiencing a medical emergency, you must contact local emergency services immediately (e.g., 000 in Australia, 911 in USA).
+            </p>
+          </div>
+
+          <div>
+            <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              D. Accuracy & Hallucinations
+            </h3>
+            <p>
+              AI models can occasionally generate incorrect, misleading, or fabricated information ("hallucinations"). You are responsible for verifying any factual information provided by the App.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ marginBottom: '32px' }}>
+        <h2 style={{
+          fontSize: '24px',
+          marginBottom: '16px',
+          color: 'var(--foreground)',
+          fontWeight: '600',
+          borderBottom: '2px solid var(--border)',
+          paddingBottom: '8px'
+        }}>
+          8. Third-Party Services
         </h2>
         <p style={{ marginBottom: '16px' }}>
-          Elora relies on third-party processors to function, including:
+          Elora relies on trusted third-party processors to function. By using the App, you acknowledge the use of:
         </p>
         <div style={{
           display: 'grid',
@@ -349,8 +390,8 @@ export default function Terms() {
             padding: '16px',
             textAlign: 'center'
           }}>
-            <strong>Anthropic (Claude)</strong><br/>
-            <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>AI summarization and themes</span>
+            <strong>RevenueCat</strong><br/>
+            <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>Subscription & Purchase processing</span>
           </div>
           <div style={{
             background: 'var(--background)',
@@ -359,8 +400,8 @@ export default function Terms() {
             padding: '16px',
             textAlign: 'center'
           }}>
-            <strong>OpenAI (GPT-4.1 Mini)</strong><br/>
-            <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>Prompts and reflections</span>
+            <strong>Anthropic & OpenAI</strong><br/>
+            <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>LLM Providers for Text/Chat</span>
           </div>
           <div style={{
             background: 'var(--background)',
@@ -370,7 +411,7 @@ export default function Terms() {
             textAlign: 'center'
           }}>
             <strong>Supabase</strong><br/>
-            <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>Authentication and SSO</span>
+            <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>Authentication & Database</span>
           </div>
           <div style={{
             background: 'var(--background)',
@@ -379,29 +420,9 @@ export default function Terms() {
             padding: '16px',
             textAlign: 'center'
           }}>
-            <strong>Railway</strong><br/>
+            <strong>Railway & PostgreSQL</strong><br/>
             <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>Backend hosting</span>
           </div>
-          <div style={{
-            background: 'var(--background)',
-            border: '1px solid var(--border)',
-            borderRadius: '6px',
-            padding: '16px',
-            textAlign: 'center'
-          }}>
-            <strong>Redis & PostgreSQL</strong><br/>
-            <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>Data scheduling, storage, and embeddings</span>
-          </div>
-        </div>
-        <div style={{
-          background: 'var(--background)',
-          border: '1px solid var(--border)',
-          borderRadius: '6px',
-          padding: '16px'
-        }}>
-          <p style={{ margin: 0 }}>
-            These providers process your data only for delivering app features. <strong>We do not authorize them to use your data for advertising or training models.</strong>
-          </p>
         </div>
       </section>
 
@@ -414,7 +435,7 @@ export default function Terms() {
           borderBottom: '2px solid var(--border)',
           paddingBottom: '8px'
         }}>
-          8. Termination & Account Deletion
+          9. Termination & Account Deletion
         </h2>
         <div style={{
           display: 'flex',
@@ -440,39 +461,12 @@ export default function Terms() {
             flex: '1',
             minWidth: '200px'
           }}>
-            <strong>Email:</strong> <a href="mailto:samrmccarthy6@gmail.com" style={{ color: 'var(--foreground)', textDecoration: 'none' }}>samrmccarthy6@gmail.com</a> with subject "Delete My Account"
+            <strong>Email:</strong> <a href="mailto:samrmccarthy6@gmail.com" style={{ color: 'var(--foreground)', textDecoration: 'none' }}>samrmccarthy6@gmail.com</a>
           </div>
         </div>
         <p style={{ marginBottom: '16px' }}>
-          Deleting your account will remove your journal entries, summaries, embeddings, and associated personal data from our systems within up to 30 days.
+          Deleting your account will remove your journal entries, summaries, and associated personal data from our systems. Note that subscription cancellations must be done separately via your device settings.
         </p>
-        <p>
-          We may suspend or terminate access if you violate these Terms or engage in misuse of the App.
-        </p>
-      </section>
-
-      <section style={{ marginBottom: '32px' }}>
-        <h2 style={{
-          fontSize: '24px',
-          marginBottom: '16px',
-          color: 'var(--foreground)',
-          fontWeight: '600',
-          borderBottom: '2px solid var(--border)',
-          paddingBottom: '8px'
-        }}>
-          9. Intellectual Property
-        </h2>
-        <ul style={{ paddingLeft: '24px', marginBottom: '16px' }}>
-          <li style={{ marginBottom: '12px' }}>
-            All intellectual property in Elora (software, design, branding, features) belongs to Samuel McCarthy.
-          </li>
-          <li style={{ marginBottom: '12px' }}>
-            You may not copy, modify, distribute, reverse engineer, or create derivative works from the App.
-          </li>
-          <li style={{ marginBottom: '12px' }}>
-            You retain rights to your own content (journal entries, voice/text submissions).
-          </li>
-        </ul>
       </section>
 
       <section style={{ marginBottom: '32px' }}>
@@ -502,7 +496,7 @@ export default function Terms() {
             We make no guarantees about uninterrupted service, accuracy of AI outputs, or fitness for a particular purpose.
           </li>
           <li style={{ marginBottom: '12px' }}>
-            <strong>AI-generated insights are for reflection and personal growth only and should not be considered medical, psychological, or legal advice.</strong>
+            We do not store your financial payment details (credit card numbers); this is handled entirely by the App Store and Google Play.
           </li>
         </ul>
       </section>
@@ -523,7 +517,7 @@ export default function Terms() {
         </p>
         <ul style={{ paddingLeft: '24px' }}>
           <li style={{ marginBottom: '12px' }}>
-            We are not liable for indirect, incidental, or consequential damages, including data loss, arising from your use of the App.
+            We are not liable for indirect, incidental, or consequential damages arising from your use of the App or reliance on AI advice.
           </li>
           <li style={{ marginBottom: '12px' }}>
             Our total liability for any claim shall not exceed the amount (if any) you paid for the App in the 12 months before the claim.
@@ -540,39 +534,7 @@ export default function Terms() {
           borderBottom: '2px solid var(--border)',
           paddingBottom: '8px'
         }}>
-          12. International Use
-        </h2>
-        <p>
-          Elora is operated from Australia. If you access the App from outside Australia, you are responsible for compliance with your local laws.
-        </p>
-      </section>
-
-      <section style={{ marginBottom: '32px' }}>
-        <h2 style={{
-          fontSize: '24px',
-          marginBottom: '16px',
-          color: 'var(--foreground)',
-          fontWeight: '600',
-          borderBottom: '2px solid var(--border)',
-          paddingBottom: '8px'
-        }}>
-          13. Changes to Terms
-        </h2>
-        <p>
-          We may update these Terms from time to time. The "Last updated" date reflects the current version. If changes are material, we will notify you in-app or by email (if you have an account). Continued use of the App after changes constitutes acceptance of the updated Terms.
-        </p>
-      </section>
-
-      <section style={{ marginBottom: '32px' }}>
-        <h2 style={{
-          fontSize: '24px',
-          marginBottom: '16px',
-          color: 'var(--foreground)',
-          fontWeight: '600',
-          borderBottom: '2px solid var(--border)',
-          paddingBottom: '8px'
-        }}>
-          14. Governing Law
+          12. Governing Law
         </h2>
         <p>
           These Terms are governed by the laws of Victoria, Australia, without regard to conflict of law principles.
@@ -592,7 +554,7 @@ export default function Terms() {
           color: 'var(--foreground)',
           fontWeight: '600'
         }}>
-          15. Contact Us
+          13. Contact Us
         </h2>
         <p style={{ margin: 0, fontSize: '16px' }}>
           For questions about these Terms, please contact:<br/><br/>
