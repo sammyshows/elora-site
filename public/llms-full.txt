@@ -1,0 +1,74 @@
+# Elora — Full Entity Reference
+
+## What is Elora?
+Elora is a voice-first AI journaling application for iOS and Android. It transcribes voice journal entries, analyzes text and voice entries for emotional patterns, and generates personalized insights. All entries are encrypted end-to-end. Elora is free to download with an optional Elora Premium subscription.
+
+## Platforms
+- iOS (iPhone, iPad) — App Store
+- Android (phones, tablets) — Google Play
+
+## Download Links
+- https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869
+- https://play.google.com/store/apps/details?id=com.elora.ai
+
+## Features
+
+### Voice Journaling
+Speak journal entries naturally. Elora transcribes voice recordings into text automatically.
+
+### Text Journaling
+Type journal entries using the on-device keyboard.
+
+### AI Summaries & Insights
+Each entry is analyzed for emotional themes, key topics, and recurring patterns. Summaries are generated and surfaced in the timeline.
+
+### Emotional Pattern Detection
+Elora tracks moods, emotional themes, and topics across entries. Patterns are visualized over weeks and months.
+
+### Explore (Chat with Your Journal)
+A conversational interface that answers questions based on your journal history. Users can ask about past entries, recurring themes, or personal growth trends.
+
+### Soul Map
+A graph visualization connecting thoughts, emotions, and recurring themes across journal entries.
+
+### Guided Reflection Prompts
+When users are unsure what to write, Elora suggests prompts based on their own journal patterns.
+
+### Offline-First Storage
+Entries are saved on-device first and sync securely when online. Journaling works without an internet connection.
+
+### End-to-End Encryption
+All journal entries are encrypted end-to-end. Only the user can read their entries.
+
+### Cross-Device Sync
+Journal data syncs securely across iOS and Android devices when signed into the same account.
+
+## Pricing
+- Free tier: journaling, AI summaries, voice transcription, pattern tracking, guided prompts
+- Elora Premium: USD 4.99/month (Monthly or Annual subscription) — unlimited Explore chat, advanced insights, cross-device sync
+
+## Privacy
+- End-to-end encryption on all journal entries
+- No data sold to third parties
+- No advertising
+- No AI model training on user journal entries
+- Voice recordings: processed for transcription, deleted from servers shortly after
+- AI providers: Anthropic and OpenAI (API access, not used for model training)
+- Users can export or delete data at any time
+
+## AI Providers
+- Anthropic — AI summarization and emotional theme analysis
+- OpenAI — AI prompts, contextual insights, and chat
+
+## Legal
+- Privacy Policy: https://elora.day/privacy-policy
+- Terms of Service: https://elora.day/terms
+- Data Controller: Samuel McCarthy
+- Governing Law: Victoria, Australia
+
+## Organization
+- Name: Elora
+- Founded: 2024
+- Founder: Samuel McCarthy
+- Email Contact: available on Support page
+- Website: https://elora.day

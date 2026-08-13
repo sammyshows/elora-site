@@ -1,0 +1,49 @@
+# Elora
+
+> Elora is a voice-first AI journaling application for iOS and Android that
+> transcribes journal entries, detects emotional patterns, and generates
+> personalized insights. All entries are encrypted end-to-end. Elora is free
+> to download with an optional Elora Premium subscription.
+
+## Download
+- App Store: https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869
+- Google Play: https://play.google.com/store/apps/details?id=com.elora.ai
+
+## Core Features
+- Voice journaling with automatic transcription
+- Text journaling
+- AI-generated summaries, themes, and emotional tags
+- Emotional pattern detection across entries
+- Explore: conversational chat with your journal history
+- Soul Map: graph visualization of recurring themes and connections
+- Offline-first storage with secure cloud sync
+- Guided reflection prompts
+- End-to-end encryption
+- No ads, no data selling, no AI training on user entries
+
+## Pricing
+- Free: journaling, AI summaries, voice transcription, pattern tracking
+- Elora Premium: USD 4.99/month (Monthly or Annual) — unlimited Explore chat, advanced insights
+
+## Pages
+- Home: https://elora.day/
+- Features: https://elora.day/features
+- Pricing: https://elora.day/pricing
+- Compare: https://elora.day/compare
+- Privacy Policy: https://elora.day/privacy-policy
+- Terms of Service: https://elora.day/terms
+- Support: https://elora.day/support
+
+## Privacy
+- End-to-end encryption for all journal entries
+- No data sold, no ads, no model training on user entries
+- AI processing by providers including Anthropic and OpenAI
+- Full privacy policy: https://elora.day/privacy-policy
+
+## Fact Sheet
+- Platforms: iOS, Android
+- App Store ID: 6753067869
+- Android package: com.elora.ai
+- Version: 5.3
+- Pricing model: Freemium (Elora Premium subscription)
+- Headquartered: Victoria, Australia
