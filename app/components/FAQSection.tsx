@@ -1,7 +1,3 @@
-'use client';
-
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import SectionHeading from './SectionHeading';
 
 interface FAQ {
@@ -12,50 +8,47 @@ interface FAQ {
 const faqs: FAQ[] = [
   {
     question: "What is Elora and how does it work?",
-    answer: "Elora is an AI-powered journaling app that helps you gain deep insights into your thoughts, emotions, and personal growth. You can journal using voice or text, and Elora's advanced AI analyzes your entries to provide personalized insights, identify patterns, and help you understand yourself better over time."
+    answer: "Elora is an AI-powered voice journaling app for iOS and Android. You journal using voice or text. Elora transcribes voice entries, analyzes them for emotional themes and patterns, and provides personalized insights. All entries are encrypted end-to-end."
   },
   {
     question: "Is my journal data private and secure?",
-    answer: "Absolutely. Your privacy is our top priority. All journal entries are encrypted and stored locally on your device. We don't use cloud sync, which means your data never leaves your phone. There's no tracking, no ads, and we never sell your data. Your thoughts are yours alone."
+    answer: "Yes. All journal entries are encrypted end-to-end. Elora does not sell your data, show ads, or use your entries to train AI models. Entries are stored on your device and synced securely when online. You can export or delete your data at any time."
   },
   {
     question: "How is Elora different from other journaling apps?",
-    answer: "Elora stands out with its deep AI understanding that genuinely gets to know you over time. Unlike generic journaling apps with surface-level prompts, Elora provides personalized, meaningful insights based on your unique patterns and history. Plus, our voice-first design and complete privacy focus make reflection natural and secure."
+    answer: "Elora combines voice journaling, automatic emotional pattern detection, and a conversational Explore feature that lets you ask questions about your own journal history. Most journaling apps store text only; Elora analyzes it and makes it searchable by meaning and theme."
   },
   {
     question: "Can I use voice to journal?",
-    answer: "Yes! Elora is designed with voice-first journaling in mind. Simply speak your thoughts naturally, and Elora transcribes and understands them. Many users find voice journaling more authentic and effortless than typing, especially when processing emotions or capturing spontaneous insights."
+    answer: "Yes. Elora is designed with voice-first journaling. Speak your thoughts naturally and Elora transcribes them automatically. Both voice and text entries feed into the same insight engine."
   },
   {
     question: "What kind of insights does Elora provide?",
-    answer: "Elora provides personalized insights about your emotional patterns, growth trends, recurring themes, and behavioral patterns. The AI identifies connections between entries, highlights areas of growth, recognizes when you're experiencing breakthroughs, and offers meaningful observations that help you understand yourself better."
+    answer: "Elora generates summaries, emotional themes, and behavioral insights after each entry. It tracks recurring patterns, mood trends, and personal growth indicators across your journal history. Insights become more personalized as you journal more."
   },
   {
     question: "What is the Explore feature?",
-    answer: "Explore is like having ChatGPT that knows your entire journal history. You can ask Elora questions about your past entries, patterns, or growth, and it will search through your history to provide context-aware responses based on your unique journey. It's a powerful tool for self-discovery and reflection."
+    answer: "Explore is a conversational AI interface that answers questions based on your journal history. You can ask about past entries, recurring themes, or personal growth trends. It searches your entries by meaning, not just keywords."
   },
   {
     question: "How much does Elora cost?",
-    answer: "Elora offers a free download with core journaling features. Premium features including advanced AI insights, unlimited voice entries, and the Explore feature are available through a subscription. Check the App Store for current pricing and subscription options."
+    answer: "Elora is free to download with core journaling and AI insight features. Elora Premium is $4.99/month (Monthly or Annual) and unlocks unlimited Explore chat conversations and advanced insights."
   },
   {
     question: "Is Elora available on Android?",
-    answer: "Currently, Elora is available exclusively on iOS (iPhone and iPad). We're focused on delivering the best possible experience on Apple devices first. Android support may be considered in the future based on user demand."
+    answer: "Yes. Elora is available on both the Apple App Store (iOS) and Google Play (Android). Your journal syncs across devices when signed into the same account."
   },
   {
     question: "Do I need internet to use Elora?",
-    answer: "Elora works both online and offline. You can write journal entries anytime without an internet connection. However, some features like AI insights and voice transcription require an internet connection to function. Your entries are always stored locally on your device."
+    answer: "Elora works offline. You can write journal entries without an internet connection. AI insights and voice transcription require an internet connection. Entries sync securely when you are online."
   },
   {
     question: "How do I get started with Elora?",
-    answer: "Getting started is simple! Download Elora from the App Store, create an account (or use anonymously), and start with your first entry. You can type or speak - whatever feels natural. Elora will guide you with thoughtful prompts if you need inspiration. The more you journal, the more personalized your insights become."
+    answer: "Download Elora from the App Store or Google Play. Create an account or start journaling immediately. You can type or speak your first entry. Elora will suggest prompts if you need inspiration."
   }
 ];
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  // Generate FAQ schema for SEO
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -82,48 +75,27 @@ export default function FAQSection() {
         />
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <motion.div
+            <details
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="bg-surface rounded-2xl border border-border overflow-hidden hover:border-primary/40 transition-colors duration-300"
+              className="group bg-surface rounded-2xl border border-border overflow-hidden hover:border-primary/40 transition-colors duration-300"
             >
-              <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-background/50 transition-colors duration-200"
-              >
+              <summary className="cursor-pointer list-none px-6 py-5 flex items-center justify-between text-left hover:bg-background/50 transition-colors duration-200">
                 <span className="text-lg font-semibold text-text pr-8">
                   {faq.question}
                 </span>
-                <motion.svg
-                  animate={{ rotate: openIndex === index ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="w-5 h-5 text-primary flex-shrink-0"
+                <svg
+                  className="w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </motion.svg>
-              </button>
-              <AnimatePresence>
-                {openIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="px-6 pb-5 text-secondary-text leading-relaxed">
-                      {faq.answer}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
+                </svg>
+              </summary>
+              <div className="px-6 pb-5 text-secondary-text leading-relaxed">
+                {faq.answer}
+              </div>
+            </details>
           ))}
         </div>
       </div>

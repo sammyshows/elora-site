@@ -65,7 +65,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-text mb-4 xl:mb-8 leading-tight order-1"
               >
-                Your journal that <span className="text-primary">truly understands</span> you
+                Elora: the AI journal that <span className="text-primary">truly understands</span> you
               </motion.h1>
 
               {/* Hero Screenshot - Shows on mobile/tablet/laptop after heading */}
@@ -94,7 +94,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.1 }}
                 className="text-xl xl:text-2xl text-secondary-text mb-8 leading-relaxed hidden xl:block order-3"
               >
-                Experience journaling with deep AI insights that genuinely get you. Private, personal, and profound.
+                Elora is a voice-first AI journaling app with automatic transcription, emotional pattern detection, and end-to-end encryption.
               </motion.p>
 
               <motion.div
@@ -121,7 +121,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="text-lg text-secondary-text mt-6 leading-relaxed xl:hidden order-4"
               >
-                Experience journaling with deep AI insights that genuinely get you. Private, personal, and profound.
+                Elora is a voice-first AI journaling app with automatic transcription, emotional pattern detection, and end-to-end encryption.
               </motion.p>
             </div>
 
@@ -153,31 +153,31 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Why Elora is different"
-            subtitle="Not just another journaling app. Elora genuinely understands you, learns from you, and grows with you."
+            subtitle="Elora analyzes journal entries with AI, works by voice or text, and encrypts everything end-to-end."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <FeatureCard
               icon="🧠"
               title="AI that genuinely gets you"
-              description="Powered by advanced AI that develops a deep understanding of your thoughts, patterns, and emotions over time. Not generic, truly personal."
+              description="Elora's AI analyzes your journal entries to detect emotional patterns, recurring themes, and personal growth trends over time. Each insight is based on your unique history."
               index={0}
             />
             <FeatureCard
               icon="🔒"
               title="Private by design"
-              description="Your data, your control. Everything stays on your device. No ads, no tracking, no selling your information. Complete privacy."
+              description="All entries are encrypted end-to-end. Elora does not sell your data, show ads, or use your entries to train AI models. You remain in control."
               index={1}
             />
             <FeatureCard
               icon="💡"
               title="Life-changing insights"
-              description="Receive meaningful, personalized insights that help you understand yourself better. Real depth, not surface-level observations."
+              description="Get summaries, emotional themes, and behavioral insights after each journal entry. Elora identifies patterns across weeks and months of entries."
               index={2}
             />
             <FeatureCard
               icon="🎙️"
               title="Voice or text"
-              description="Journal however feels natural. Speak your thoughts aloud or type them out. Elora understands both perfectly."
+              description="Speak your entries naturally and Elora transcribes them automatically. Type if you prefer. Both input methods feed into the same insight engine."
               index={3}
             />
           </div>
@@ -188,44 +188,44 @@ export default function Home() {
       <AnimatedSection background="bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            title="Transform your life, one entry at a time"
-            subtitle="Whether you're seeking clarity, growth, or simply a deeper understanding of yourself."
+            title="What Elora helps you with"
+            subtitle="Personal growth, emotional processing, and clearer decisions — tracked through your journal history."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <FeatureCard
               icon="🌱"
               title="Personal Growth"
-              description="Track your journey and watch yourself evolve. Elora helps you identify patterns, celebrate progress, and set meaningful goals."
+              description="Track recurring emotional patterns and personal growth trends across your journal history. Surface themes like confidence shifts, stress triggers, and relationship dynamics."
               index={0}
             />
             <FeatureCard
               icon="🎨"
               title="Creative Breakthrough"
-              description="Unlock your creative potential. Journal your ideas and let Elora help you connect dots you never saw before."
+              description="Journal your ideas and let Elora connect thoughts that surfaced weeks apart. Discover links between entries you would not find manually."
               index={1}
             />
             <FeatureCard
               icon="❤️"
               title="Emotional Processing"
-              description="Navigate complex emotions with clarity. Elora provides a safe space to explore feelings and gain perspective."
+              description="Each entry is tagged with emotional themes. Review how your emotional landscape shifts over days, weeks, and months."
               index={2}
             />
             <FeatureCard
               icon="🧘"
               title="Mindful Reflection"
-              description="Cultivate daily mindfulness practice. Reflect on your day with guided prompts that encourage deeper awareness."
+              description="Receive thoughtful prompts based on patterns from your own journal, not generic templates. Reflect with relevance."
               index={3}
             />
             <FeatureCard
               icon="🎯"
               title="Decision Making"
-              description="Gain clarity on important decisions. Elora helps you weigh options and understand what truly matters to you."
+              description="Explore past entries about a decision and surface what mattered most in similar situations. Gain clarity from your own history."
               index={4}
             />
             <FeatureCard
               icon="🌟"
               title="Mental Wellness"
-              description="Support your mental health journey. Track moods, identify triggers, and build resilience through reflection."
+              description="Monitor mood trends and identify recurring triggers through AI-analyzed journal patterns. Support your mental health journey with data you control."
               index={5}
             />
           </div>
@@ -236,8 +236,8 @@ export default function Home() {
       <AnimatedSection background="bg-gradient-to-b from-background via-surface to-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            title="Insights that actually matter"
-            subtitle="Experience the depth of understanding that makes Elora truly special."
+            title="Example insights"
+            subtitle="Here is the kind of AI-generated insight Elora produces from your journal entries."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <InsightCard
@@ -269,8 +269,8 @@ export default function Home() {
       <AnimatedSection background="bg-surface">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            title="Watch yourself grow"
-            subtitle="See your journey unfold with a visual timeline of your thoughts, emotions, and breakthroughs."
+            title="Track your growth over time"
+            subtitle="Elora builds a visual timeline of your thoughts, emotions, and patterns across weeks and months."
           />
           <div className="space-y-4">
             <TimelineCard
@@ -377,27 +377,27 @@ export default function Home() {
           <div className="bg-surface p-8 md:p-12 lg:p-16 rounded-3xl shadow-2xl border border-primary/20">
             <SectionHeading
               title="Chat with your journal"
-              subtitle="Introducing Explore: Your personal AI that knows your entire journey."
+              subtitle="Explore: a conversational AI interface that knows your full journal history."
             />
             <div className="space-y-6 text-center max-w-3xl mx-auto">
               <p className="text-lg md:text-xl text-secondary-text leading-relaxed">
-                Ask Elora anything about your past entries, patterns, or growth. It searches through your history and provides context-aware responses based on your unique journey.
+                Ask Elora questions about your past entries, recurring themes, or patterns. Explore searches your journal history and provides context-aware responses based on your unique journey.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
                 <div className="p-6 bg-background rounded-2xl">
                   <div className="text-4xl mb-3">💬</div>
-                  <h4 className="font-bold text-text mb-2">Natural Conversation</h4>
-                  <p className="text-sm text-secondary-text">Like ChatGPT, but it knows you deeply</p>
+                  <h4 className="font-bold text-text mb-2">Conversational Q&A</h4>
+                  <p className="text-sm text-secondary-text">Ask questions about your entries in natural language</p>
                 </div>
                 <div className="p-6 bg-background rounded-2xl">
                   <div className="text-4xl mb-3">🔍</div>
-                  <h4 className="font-bold text-text mb-2">Smart Search</h4>
-                  <p className="text-sm text-secondary-text">Instantly finds relevant entries and patterns</p>
+                  <h4 className="font-bold text-text mb-2">Semantic Search</h4>
+                  <p className="text-sm text-secondary-text">Instantly finds relevant entries by meaning, not keywords</p>
                 </div>
                 <div className="p-6 bg-background rounded-2xl">
                   <div className="text-4xl mb-3">🧭</div>
-                  <h4 className="font-bold text-text mb-2">Personal Guide</h4>
-                  <p className="text-sm text-secondary-text">Get insights based on your entire history</p>
+                  <h4 className="font-bold text-text mb-2">Personal Context</h4>
+                  <p className="text-sm text-secondary-text">Answers draw from your entire journal, not generic knowledge</p>
                 </div>
               </div>
             </div>
@@ -405,99 +405,49 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
-      {/* SEO Long-Form Content Section */}
+      {/* Entity Fact Section */}
       <AnimatedSection background="bg-background">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Article",
-              "headline": "The Future of Personal Growth: AI-Powered Journaling",
-              "description": "Discover how AI-powered journaling apps like Elora are transforming personal growth, mental wellness, and self-discovery through voice journaling, deep insights, and complete privacy.",
-              "author": {
-                "@type": "Person",
-                "name": "Samuel McCarthy",
-                "email": "samrmccarthy6@gmail.com"
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "Elora",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": "https://elora.day/icon.svg"
-                }
-              },
-              "datePublished": "2024-01-01",
-              "dateModified": "2024-01-01",
-              "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://elora.day/#article"
-              },
-              "articleSection": "Personal Growth, Mental Health, Technology",
-              "keywords": "AI journaling, voice journaling, personal growth app, mental wellness, emotional intelligence, private journal, self-discovery, mindfulness app",
-              "wordCount": 800
-            })
-          }}
-        />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <article className="prose prose-lg max-w-none" itemScope itemType="https://schema.org/Article">
-            <h2 className="text-3xl md:text-4xl font-bold text-text mb-6">
-              The Future of Personal Growth: AI-Powered Journaling
-            </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-text mb-6 text-center">
+            What is Elora?
+          </h2>
+          <p className="text-lg text-secondary-text leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+            Elora is a voice-first AI journaling application for iOS and Android. It transcribes voice journal entries, analyzes text and voice entries for emotional patterns, and generates personalized insights. All entries are encrypted end-to-end. Elora is free to download with an optional Elora Premium subscription.
+          </p>
 
-            <p className="text-lg text-secondary-text leading-relaxed mb-6">
-              In an age where self-awareness and personal growth have become essential for mental wellness, traditional journaling methods often fall short. That's where <strong>Elora</strong>, an innovative <a href="#features" className="text-primary hover:underline">AI-powered journal app</a>, transforms the landscape of personal reflection and emotional intelligence.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-3xl mx-auto">
+            <div className="bg-surface p-6 rounded-2xl border border-border">
+              <h3 className="text-xl font-bold text-text mb-4">Elora vs Traditional Journaling</h3>
+              <ul className="space-y-3 text-secondary-text">
+                <li className="flex gap-2"><span className="text-primary font-bold">&#x2713;</span> Voice input with automatic transcription</li>
+                <li className="flex gap-2"><span className="text-primary font-bold">&#x2713;</span> Automatic emotional pattern detection</li>
+                <li className="flex gap-2"><span className="text-primary font-bold">&#x2713;</span> Semantic search across all entries</li>
+                <li className="flex gap-2"><span className="text-primary font-bold">&#x2713;</span> Soul Map graph visualization</li>
+                <li className="flex gap-2"><span className="text-primary font-bold">&#x2713;</span> Cross-device sync</li>
+                <li className="flex gap-2"><span className="text-primary font-bold">&#x2713;</span> End-to-end encryption</li>
+              </ul>
+            </div>
+            <div className="bg-surface p-6 rounded-2xl border border-border">
+              <h3 className="text-xl font-bold text-text mb-4">Key Facts</h3>
+              <ul className="space-y-3 text-secondary-text">
+                <li><strong className="text-text">Platforms:</strong> iOS and Android</li>
+                <li><strong className="text-text">Pricing:</strong> Free + Elora Premium ($4.99/month)</li>
+                <li><strong className="text-text">Privacy:</strong> End-to-end encryption, no data sold</li>
+                <li><strong className="text-text">AI:</strong> Providers include Anthropic and OpenAI</li>
+                <li><strong className="text-text">Storage:</strong> Offline-first with secure cloud sync</li>
+                <li><strong className="text-text">Founded:</strong> 2024</li>
+              </ul>
+            </div>
+          </div>
 
-            <h3 className="text-2xl font-bold text-text mt-8 mb-4">
-              Why Choose an AI Journal App Over Traditional Journaling?
-            </h3>
-
-            <p className="text-lg text-secondary-text leading-relaxed mb-6">
-              While pen-and-paper journaling has been a cornerstone of self-reflection for centuries, <strong>AI journaling apps for personal growth</strong> offer unprecedented advantages. Elora combines the intimacy of traditional journaling with cutting-edge artificial intelligence to provide <a href="#features" className="text-primary hover:underline">insights that genuinely understand you</a>.
-            </p>
-
-            <p className="text-lg text-secondary-text leading-relaxed mb-6">
-              Unlike generic journal prompts or basic diary apps, Elora's <strong>emotionally intelligent AI</strong> learns your unique patterns, communication style, and emotional landscape. It's like having a deeply perceptive friend who remembers every conversation and can help you connect dots you never saw before. Learn more about <a href="/privacy-policy" className="text-primary hover:underline">how we protect your privacy</a> while delivering these powerful insights.
-            </p>
-
-            <h3 className="text-2xl font-bold text-text mt-8 mb-4">
-              Voice Journaling: Express Yourself Naturally
-            </h3>
-
-            <p className="text-lg text-secondary-text leading-relaxed mb-6">
-              One of Elora's most beloved features is <strong>voice journaling</strong>. Many people find typing restrictive when trying to process complex emotions or capture spontaneous insights. With voice-first design, you can speak your thoughts naturally, as if talking to a trusted confidant. The AI transcribes and understands your words, making reflection effortless and authentic.
-            </p>
-
-            <h3 className="text-2xl font-bold text-text mt-8 mb-4">
-              Privacy-First: Your Thoughts, Your Control
-            </h3>
-
-            <p className="text-lg text-secondary-text leading-relaxed mb-6">
-              In a world of data breaches and privacy concerns, Elora stands out as a <strong>private journaling app with AI</strong>. Your entries never leave your device. There's no cloud sync, no data selling, no ads. Your most personal thoughts remain exactly that—personal. This commitment to privacy means you can journal with complete honesty, knowing your words are safe.
-            </p>
-
-            <h3 className="text-2xl font-bold text-text mt-8 mb-4">
-              Real Intelligence, Real Understanding
-            </h3>
-
-            <p className="text-lg text-secondary-text leading-relaxed mb-6">
-              What sets Elora apart from other <strong>mindfulness and mental health apps</strong> is the depth of its AI understanding. The insights aren't generic motivational quotes or surface-level observations. Elora genuinely gets to know you—your values, your struggles, your growth patterns. Over time, it becomes an invaluable tool for <strong>self-discovery and emotional wellness</strong>. Explore our <a href="#features" className="text-primary hover:underline">key features that make journaling transformative</a>.
-            </p>
-
-            <p className="text-lg text-secondary-text leading-relaxed mb-6">
-              Whether you're navigating life transitions, working on personal development, processing emotions, or simply seeking greater self-awareness, Elora provides the support and insight you need. It's not just a journal—it's a companion for your most important journey: understanding yourself. Read our <a href="/support" className="text-primary hover:underline">support guide</a> to get started.
-            </p>
-
-            <h3 className="text-2xl font-bold text-text mt-8 mb-4">
-              Start Your Journey Today
-            </h3>
-
-            <p className="text-lg text-secondary-text leading-relaxed">
-              Join thousands of people who have transformed their lives through consistent, meaningful reflection with Elora. <a href="https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869" className="text-primary hover:underline font-semibold">Download the app today</a> and experience the difference that truly intelligent, deeply private, emotionally aware journaling can make in your life. Check our <a href="/terms" className="text-primary hover:underline">terms of service</a> and <a href="/privacy-policy" className="text-primary hover:underline">privacy policy</a> to learn more about our commitment to your privacy.
-            </p>
-          </article>
+          <div className="text-center mt-10">
+            <a
+              href="/features"
+              className="inline-block text-primary hover:underline font-semibold"
+            >
+              View all features &#8594;
+            </a>
+          </div>
         </div>
       </AnimatedSection>
 
@@ -505,24 +455,24 @@ export default function Home() {
       <AnimatedSection background="bg-surface">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            title="Your privacy is sacred"
-            subtitle="We take your trust seriously. Here's our commitment to you."
+            title="Privacy by design"
+            subtitle="Your journal belongs to you. Here is how we protect it."
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="text-5xl mb-4">🔒</div>
               <h4 className="text-xl font-bold text-text mb-3">End-to-End Encryption</h4>
-              <p className="text-secondary-text">Your entries are encrypted and stay on your device. No one can read them but you.</p>
+              <p className="text-secondary-text">All journal entries are encrypted end-to-end. Only you can read them. Elora does not have access to your journal content.</p>
             </div>
             <div className="text-center p-6">
               <div className="text-5xl mb-4">🚫</div>
               <h4 className="text-xl font-bold text-text mb-3">No Tracking, No Ads</h4>
-              <p className="text-secondary-text">We don't track your behavior, sell your data, or show you ads. Ever.</p>
+              <p className="text-secondary-text">We do not track your behavior, sell your data, or show you ads. Your entries are not used to train AI models.</p>
             </div>
             <div className="text-center p-6">
               <div className="text-5xl mb-4">✋</div>
-              <h4 className="text-xl font-bold text-text mb-3">You're in Control</h4>
-              <p className="text-secondary-text">Export or delete your data anytime. Your journal belongs to you, always.</p>
+              <h4 className="text-xl font-bold text-text mb-3">You are in Control</h4>
+              <p className="text-secondary-text">Export or delete your data at any time. Your journal belongs to you, always. Full privacy policy available below.</p>
             </div>
           </div>
           <div className="text-center mt-8">
@@ -549,7 +499,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-text mb-6"
           >
-            Change your life, one entry at a time
+            Start your journey with Elora today
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -558,7 +508,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-secondary-text mb-10"
           >
-            Join the journey to deeper self-understanding. Your future self will thank you.
+            Free to download. End-to-end encrypted. Available on iOS and Android.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -583,15 +533,23 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-text text-surface py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <Image src="/icon.svg" alt="Elora" width={32} height={32} className="rounded-lg" />
                 <span className="text-xl font-bold">Elora</span>
               </div>
               <p className="text-secondary-text text-sm">
-                Journal with deep insight and AI understanding. Your companion for personal growth and self-discovery.
+                AI voice journaling app for iOS and Android. End-to-end encrypted. Free download.
               </p>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">Product</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/features" className="hover:text-primary transition-colors">Features</a></li>
+                <li><a href="/pricing" className="hover:text-primary transition-colors">Pricing</a></li>
+                <li><a href="/compare" className="hover:text-primary transition-colors">Compare</a></li>
+              </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">Legal</h4>
@@ -612,7 +570,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-secondary-text/20 pt-8 text-center text-sm text-secondary-text">
-            <p>&copy; 2025 Elora. All rights reserved. Made with care for your growth.</p>
+            <p>&copy; {new Date().getFullYear()} Elora. All rights reserved.</p>
           </div>
         </div>
       </footer>

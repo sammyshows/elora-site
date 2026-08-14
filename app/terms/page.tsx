@@ -1,3 +1,11 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Elora Terms of Service",
+  description: "Terms and conditions for Elora, the AI voice journaling app. Covers accounts, subscriptions, Elora Premium billing, AI feature liability, and data ownership.",
+  alternates: { canonical: '/terms' },
+};
+
 export default function Terms() {
   return (
     <div style={{
@@ -122,7 +130,7 @@ export default function Terms() {
               AI "Explore" Chat
             </h3>
             <p style={{ margin: 0, fontSize: '14px', color: 'var(--foreground)' }}>
-              An interactive chat interface powered by Large Language Models (LLMs) for reflective conversation.
+              An interactive chat interface powered by AI for reflective conversation based on your journal history.
             </p>
           </div>
           <div style={{
@@ -135,7 +143,7 @@ export default function Terms() {
               Offline-First Storage
             </h3>
             <p style={{ margin: 0, fontSize: '14px', color: 'var(--foreground)' }}>
-              Entries saved locally via expo-sqlite, then synced securely to our database when online.
+              Entries saved on-device first, then synced securely to our servers when online.
             </p>
           </div>
         </div>
@@ -327,7 +335,7 @@ export default function Terms() {
               A. I Am Code, Not Human
             </h3>
             <p>
-              Elora is a software program utilizing Large Language Models. It does not have feelings, consciousness, a physical body, or independent agency. It cannot "love" you, "miss" you, or form a genuine human relationship. Any appearance of emotion is a simulated response designed to be supportive.
+              Elora is a software program utilizing AI. It does not have feelings, consciousness, a physical body, or independent agency. Any appearance of emotion is a simulated response designed to be supportive.
             </p>
           </div>
 
@@ -401,7 +409,7 @@ export default function Terms() {
             textAlign: 'center'
           }}>
             <strong>Anthropic & OpenAI</strong><br/>
-            <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>LLM Providers for Text/Chat</span>
+            <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>AI Providers</span>
           </div>
           <div style={{
             background: 'var(--background)',
@@ -420,7 +428,7 @@ export default function Terms() {
             padding: '16px',
             textAlign: 'center'
           }}>
-            <strong>Railway & PostgreSQL</strong><br/>
+            <strong>Cloud Hosting Provider</strong><br/>
             <span style={{ fontSize: '14px', color: 'var(--foreground)' }}>Backend hosting</span>
           </div>
         </div>
@@ -559,7 +567,7 @@ export default function Terms() {
         <p style={{ margin: 0, fontSize: '16px' }}>
           For questions about these Terms, please contact:<br/><br/>
           <strong>Samuel McCarthy</strong><br/>
-          📧 <a href="mailto:samrmccarthy6@gmail.com" style={{ color: 'var(--foreground)', textDecoration: 'none' }}>samrmccarthy6@gmail.com</a>
+          <a href="mailto:samrmccarthy6@gmail.com" style={{ color: 'var(--foreground)', textDecoration: 'none' }}>samrmccarthy6@gmail.com</a>
         </p>
       </section>
     </div>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elora - Journal with Deep Insight & AI Understanding",
-  description: "Your journal that truly understands you. Elora is a voice-first, emotionally intelligent journaling app that offers deep AI insights, personal growth tracking, and complete privacy. Experience journaling that genuinely gets you.",
+  title: "Elora — AI Voice Journaling App for iOS & Android",
+  description: "Elora is a voice-first AI journaling app that transcribes entries, detects emotional patterns, and generates personalized insights. End-to-end encrypted. Free on iOS and Android.",
   keywords: ["journaling app", "AI journal", "voice journaling", "personal growth", "mental health", "emotional intelligence", "private journal", "daily reflection", "mindfulness app", "AI insights"],
   authors: [{ name: "Samuel McCarthy" }],
   creator: "Samuel McCarthy",
@@ -27,23 +27,23 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://elora.day',
-    title: 'Elora - Journal with Deep Insight & AI Understanding',
-    description: 'Your journal that truly understands you. Voice-first, emotionally intelligent journaling with deep AI insights and complete privacy.',
+    title: 'Elora — AI Voice Journaling App for iOS & Android',
+    description: 'Voice-first AI journaling with automatic transcription, emotional pattern detection, and end-to-end encryption. Free download.',
     siteName: 'Elora',
     images: [
       {
-        url: '/screenshots/hero.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Elora - AI-Powered Journaling App',
+        url: '/hero.webp',
+        width: 1332,
+        height: 1036,
+        alt: 'Elora — AI Voice Journaling App for iOS and Android',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Elora - Journal with Deep Insight & AI Understanding',
-    description: 'Your journal that truly understands you. Voice-first, emotionally intelligent journaling with deep AI insights.',
-    images: ['/screenshots/hero.webp'],
+    title: 'Elora — AI Voice Journaling App',
+    description: 'Voice-first AI journaling with emotional pattern detection and end-to-end encryption.',
+    images: ['/hero.webp'],
   },
   icons: {
     icon: [
@@ -56,11 +56,6 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/site.webmanifest',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-  },
   other: {
     'color-scheme': 'light',
     'apple-itunes-app': 'app-id=6753067869',
@@ -78,6 +73,12 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -88,94 +89,89 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "MobileApplication",
-        "name": "Elora - AI Journal with Insights",
+        "@id": "https://elora.day/#app",
+        "name": "Elora",
         "alternateName": "Elora Journal",
         "applicationCategory": "LifestyleApplication",
-        "applicationSubCategory": "Journaling, Mental Wellness, Personal Growth",
-        "operatingSystem": "iOS 16.0 or later",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "priceValidUntil": "2025-12-31"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "ratingCount": "18",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "description": "Elora is a voice-first, emotionally intelligent AI journaling app that provides deep insights for personal growth. Features include voice journaling, text journaling, AI-powered insights, pattern recognition, timeline visualization, and the Explore feature for chatting with your journal history. Completely private with end-to-end encryption.",
-        "downloadUrl": "https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869",
+        "applicationSubCategory": "Journaling, Personal Growth, Mental Wellness",
+        "operatingSystem": "iOS 16.0+, Android 8.0+",
+        "url": "https://elora.day",
+        "downloadUrl": [
+          "https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869",
+          "https://play.google.com/store/apps/details?id=com.elora.ai"
+        ],
+        "softwareVersion": "5.3",
+        "description": "Elora is a voice-first AI journaling application for iOS and Android that transcribes journal entries, detects emotional patterns, and generates personalized insights. All entries are encrypted end-to-end. Features include voice journaling, text journaling, AI summaries, emotional pattern detection, Explore conversational chat, and Soul Map visualization. Elora does not sell data, show ads, or use entries to train AI models.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "description": "Free download with in-app subscription"
+          },
+          {
+            "@type": "Offer",
+            "name": "Elora Premium",
+            "price": "4.99",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "description": "Monthly subscription (USD 4.99/month) for unlimited Explore chat and advanced insights"
+          }
+        ],
+        "featureList": [
+          "Voice journaling with automatic transcription",
+          "Text journaling",
+          "AI summaries, themes, and emotional tags",
+          "Emotional pattern detection across entries",
+          "Explore: conversational chat with journal history",
+          "Soul Map: graph visualization of recurring themes",
+          "Offline-first storage with secure cloud sync",
+          "End-to-end encryption",
+          "Cross-device sync",
+          "No ads, no data selling, no AI training on user entries"
+        ],
         "screenshot": [
           "https://elora.day/screenshots/explore-prompt.webp",
           "https://elora.day/screenshots/insights.webp",
           "https://elora.day/screenshots/powerful-insight.webp",
           "https://elora.day/screenshots/entry-view.webp",
           "https://elora.day/screenshots/explore-response.webp",
-          "https://elora.day/screenshots/timeline-view.webp",
+          "https://elora.day/screenshots/timeline-view.webp"
         ],
-        "featureList": [
-          "Voice journaling with natural speech recognition",
-          "Text-based journaling",
-          "AI-powered personal insights",
-          "Emotional pattern recognition",
-          "Growth tracking and timeline visualization",
-          "Explore feature: Chat with your journal",
-          "Guided reflection prompts",
-          "End-to-end encryption",
-          "Offline-first design",
-          "No ads or tracking"
-        ],
-        "author": {
-          "@type": "Person",
-          "name": "Samuel McCarthy",
-          "email": "samrmccarthy6@gmail.com"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Elora",
-          "email": "samrmccarthy6@gmail.com",
-          "url": "https://elora.day"
-        },
-        "datePublished": "2024-01-01",
+        "publisher": { "@id": "https://elora.day/#org" },
         "inLanguage": "en",
-        "keywords": "journal app, AI journal, voice journaling, mental health app, personal growth app, mindfulness app, emotional intelligence, private journal, daily reflection, AI insights, self-discovery"
+        "datePublished": "2024-01-01"
       },
       {
         "@type": "WebSite",
+        "@id": "https://elora.day/#website",
         "url": "https://elora.day",
-        "name": "Elora - Journal with Deep Insight & AI Understanding",
-        "description": "Official website for Elora, the AI-powered journaling app for iOS. Download Elora to experience voice-first journaling with deep insights, complete privacy, and personal growth tracking.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Elora",
-          "url": "https://elora.day",
-          "logo": "https://elora.day/icon.svg",
-          "email": "samrmccarthy6@gmail.com",
-          "sameAs": []
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://elora.day/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "name": "Elora — AI Voice Journaling App",
+        "description": "Official website for Elora, a voice-first AI journaling app for iOS and Android with end-to-end encryption.",
+        "publisher": { "@id": "https://elora.day/#org" },
+        "inLanguage": "en"
       },
       {
         "@type": "Organization",
+        "@id": "https://elora.day/#org",
         "name": "Elora",
         "url": "https://elora.day",
         "logo": "https://elora.day/icon.svg",
-        "description": "Elora creates AI-powered tools for personal growth and self-discovery through journaling.",
-        "email": "samrmccarthy6@gmail.com",
-        "founder": {
-          "@type": "Person",
-          "name": "Samuel McCarthy"
-        },
+        "description": "Creator of Elora, an AI-powered voice journaling app for iOS and Android.",
         "foundingDate": "2024",
-        "sameAs": []
+        "founder": { "@id": "https://elora.day/#founder" },
+        "sameAs": [
+          "https://apps.apple.com/au/app/elora-journal-with-insight/id6753067869",
+          "https://play.google.com/store/apps/details?id=com.elora.ai"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://elora.day/#founder",
+        "name": "Samuel McCarthy",
+        "jobTitle": "Founder",
+        "worksFor": { "@id": "https://elora.day/#org" }
       }
     ]
   };
