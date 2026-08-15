@@ -49,56 +49,42 @@ const faqs: FAQ[] = [
 ];
 
 export default function FAQSection() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeading
+        title="Frequently Asked Questions"
+        subtitle="Everything you need to know about Elora"
       />
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          title="Frequently Asked Questions"
-          subtitle="Everything you need to know about Elora"
-        />
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <details
-              key={index}
-              className="group bg-surface rounded-2xl border border-border overflow-hidden hover:border-primary/40 transition-colors duration-300"
-            >
-              <summary className="cursor-pointer list-none px-6 py-5 flex items-center justify-between text-left hover:bg-background/50 transition-colors duration-200">
-                <span className="text-lg font-semibold text-text pr-8">
-                  {faq.question}
-                </span>
-                <svg
-                  className="w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </summary>
-              <div className="px-6 pb-5 text-secondary-text leading-relaxed">
-                {faq.answer}
-              </div>
-            </details>
-          ))}
-        </div>
+      <div className="space-y-4">
+        {faqs.map((faq, index) => (
+          <details
+            key={index}
+            className="group bg-surface rounded-2xl border border-border overflow-hidden hover:border-primary/40 transition-colors duration-300"
+          >
+            <summary className="cursor-pointer list-none px-6 py-5 flex items-center justify-between text-left hover:bg-background/50 transition-colors duration-200">
+              <span className="text-lg font-semibold text-text pr-8">
+                {faq.question}
+              </span>
+              <svg
+                className="w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div className="px-6 pb-5 text-secondary-text leading-relaxed">
+              {faq.answer}
+            </div>
+          </details>
+        ))}
       </div>
-    </>
+      <div className="text-center mt-8">
+        <a href="/faq" className="inline-block text-primary hover:underline font-semibold">
+          View all frequently asked questions &#8594;
+        </a>
+      </div>
+    </div>
   );
 }

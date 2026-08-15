@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Button from './components/Button';
 import SectionHeading from './components/SectionHeading';
@@ -35,12 +36,22 @@ export default function Home() {
           isScrolled ? 'bg-surface/90 backdrop-blur-lg shadow-lg' : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Image src="/icon.svg" alt="Elora" width={40} height={40} className="rounded-xl" />
-            <span className="text-2xl font-bold text-text">Elora</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-3 shrink-0">
+            <Link href="/" aria-label="Elora home">
+              <Image src="/icon.svg" alt="Elora" width={40} height={40} className="rounded-xl" />
+            </Link>
+            <Link href="/" className="text-2xl font-bold text-text hover:opacity-80 transition-opacity">Elora</Link>
           </div>
-          <div className="flex items-center gap-4">
+          <nav className="hidden lg:flex items-center gap-6 text-sm font-medium" aria-label="Main navigation">
+            <Link href="/features" className="text-secondary-text hover:text-text transition-colors">Features</Link>
+            <Link href="/pricing" className="text-secondary-text hover:text-text transition-colors">Pricing</Link>
+            <Link href="/compare" className="text-secondary-text hover:text-text transition-colors">Compare</Link>
+            <Link href="/blog" className="text-secondary-text hover:text-text transition-colors">Blog</Link>
+            <Link href="/faq" className="text-secondary-text hover:text-text transition-colors">FAQ</Link>
+            <Link href="/support" className="text-secondary-text hover:text-text transition-colors">Support</Link>
+          </nav>
+          <div className="flex items-center gap-4 shrink-0">
             <div className="hidden 2xl:flex items-center gap-1 text-sm">
               <span className="text-yellow-500">★★★★★</span>
               <span className="font-semibold text-text">5.0</span>
@@ -407,11 +418,28 @@ export default function Home() {
 
       {/* Entity Fact Section */}
       <AnimatedSection background="bg-background">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://elora.day/#webpage",
+              "url": "https://elora.day",
+              "name": "Elora — AI Voice Journaling App for iOS & Android",
+              "description": "Elora is a voice-first AI journaling application for iOS and Android that transcribes journal entries, detects emotional patterns, and generates personalized insights. All entries are encrypted end-to-end.",
+              "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ["#entity-statement"]
+              }
+            })
+          }}
+        />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-text mb-6 text-center">
             What is Elora?
           </h2>
-          <p className="text-lg text-secondary-text leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+          <p id="entity-statement" className="text-lg text-secondary-text leading-relaxed mb-8 text-center max-w-3xl mx-auto">
             Elora is a voice-first AI journaling application for iOS and Android. It transcribes voice journal entries, analyzes text and voice entries for emotional patterns, and generates personalized insights. All entries are encrypted end-to-end. Elora is free to download with an optional Elora Premium subscription.
           </p>
 
@@ -446,6 +474,13 @@ export default function Home() {
               className="inline-block text-primary hover:underline font-semibold"
             >
               View all features &#8594;
+            </a>
+            <span className="mx-3 text-muted">·</span>
+            <a
+              href="/blog"
+              className="inline-block text-primary hover:underline font-semibold"
+            >
+              Read our blog &#8594;
             </a>
           </div>
         </div>
@@ -549,6 +584,7 @@ export default function Home() {
                 <li><a href="/features" className="hover:text-primary transition-colors">Features</a></li>
                 <li><a href="/pricing" className="hover:text-primary transition-colors">Pricing</a></li>
                 <li><a href="/compare" className="hover:text-primary transition-colors">Compare</a></li>
+                <li><a href="/blog" className="hover:text-primary transition-colors">Blog</a></li>
               </ul>
             </div>
             <div>
@@ -556,6 +592,7 @@ export default function Home() {
               <ul className="space-y-2 text-sm">
                 <li><a href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</a></li>
                 <li><a href="/terms" className="hover:text-primary transition-colors">Terms of Service</a></li>
+                <li><a href="/faq" className="hover:text-primary transition-colors">FAQ</a></li>
                 <li><a href="/support" className="hover:text-primary transition-colors">Support</a></li>
               </ul>
             </div>

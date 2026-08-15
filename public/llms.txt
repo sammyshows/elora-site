@@ -30,9 +30,27 @@
 - Features: https://elora.day/features
 - Pricing: https://elora.day/pricing
 - Compare: https://elora.day/compare
+- FAQ: https://elora.day/faq
 - Privacy Policy: https://elora.day/privacy-policy
 - Terms of Service: https://elora.day/terms
 - Support: https://elora.day/support
+
+## Blog
+- Blog index: https://elora.day/blog
+- What is AI journaling: https://elora.day/blog/what-is-ai-journaling
+- Is AI journaling private: https://elora.day/blog/is-ai-journaling-private
+- How does voice journaling work: https://elora.day/blog/how-does-voice-journaling-work
+- Benefits of AI journaling: https://elora.day/blog/benefits-of-ai-journaling
+- Best AI journaling apps: https://elora.day/blog/best-ai-journaling-apps
+- AI journaling for mental health: https://elora.day/blog/ai-journaling-for-mental-health
+- How to start journaling: https://elora.day/blog/how-to-start-journaling
+- Journal prompts for self-discovery: https://elora.day/blog/journal-prompts-for-self-discovery
+- Should you use AI for journaling: https://elora.day/blog/should-you-use-ai-for-journaling
+- Voice journaling vs writing: https://elora.day/blog/voice-journaling-vs-writing
+- Journaling for productivity: https://elora.day/blog/journaling-for-productivity
+- AI journaling vs traditional: https://elora.day/blog/ai-journaling-vs-traditional-journaling
+- Journaling apps for self-reflection: https://elora.day/blog/journaling-apps-for-self-reflection
+- Is journaling good for you: https://elora.day/blog/is-journaling-good-for-you
 
 ## Privacy
 - End-to-end encryption for all journal entries
@@ -47,3 +65,6 @@
 - Version: 5.3
 - Pricing model: Freemium (Elora Premium subscription)
 - Headquartered: Victoria, Australia
+
+Related:
+- https://elora.day/llms-full.txt

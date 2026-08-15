@@ -47,6 +47,23 @@ Journal data syncs securely across iOS and Android devices when signed into the 
 - Free tier: journaling, AI summaries, voice transcription, pattern tracking, guided prompts
 - Elora Premium: USD 4.99/month (Monthly or Annual subscription) — unlimited Explore chat, advanced insights, cross-device sync
 
+## Blog
+- https://elora.day/blog — all articles
+- https://elora.day/blog/what-is-ai-journaling — What is AI journaling
+- https://elora.day/blog/is-ai-journaling-private — Is AI journaling private
+- https://elora.day/blog/how-does-voice-journaling-work — How does voice journaling work
+- https://elora.day/blog/benefits-of-ai-journaling — Benefits of AI journaling
+- https://elora.day/blog/best-ai-journaling-apps — Best AI journaling apps
+- https://elora.day/blog/ai-journaling-for-mental-health — AI journaling for mental health
+- https://elora.day/blog/how-to-start-journaling — How to start journaling
+- https://elora.day/blog/journal-prompts-for-self-discovery — Journal prompts for self-discovery
+- https://elora.day/blog/should-you-use-ai-for-journaling — Should you use AI for journaling
+- https://elora.day/blog/voice-journaling-vs-writing — Voice journaling vs writing
+- https://elora.day/blog/journaling-for-productivity — Journaling for productivity
+- https://elora.day/blog/ai-journaling-vs-traditional-journaling — AI journaling vs traditional
+- https://elora.day/blog/journaling-apps-for-self-reflection — Journaling apps for self-reflection
+- https://elora.day/blog/is-journaling-good-for-you — Is journaling good for you
+
 ## Privacy
 - End-to-end encryption on all journal entries
 - No data sold to third parties

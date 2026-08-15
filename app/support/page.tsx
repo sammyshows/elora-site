@@ -7,6 +7,41 @@ export const metadata: Metadata = {
 };
 
 export default function Support() {
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HowTo",
+        "name": "How to delete your Elora account",
+        "description": "Delete your Elora account and journal data from Settings or by email.",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Open Settings", "text": "Open the Elora app and go to Settings." },
+          { "@type": "HowToStep", "position": 2, "name": "Select Delete Account", "text": "Select Delete Account. You can also email support with the subject \"Delete My Account\"." },
+          { "@type": "HowToStep", "position": 3, "name": "Confirm deletion", "text": "Confirm deletion. Your entries and personal data are permanently removed within up to 30 days." }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to cancel Elora Premium",
+        "description": "Cancel your Elora Premium subscription through Apple or Google.",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Open subscriptions", "text": "On iOS, open Settings > your Apple ID > Subscriptions. On Android, open Google Play > Payments & subscriptions > Subscriptions." },
+          { "@type": "HowToStep", "position": 2, "name": "Select Elora", "text": "Select the Elora subscription." },
+          { "@type": "HowToStep", "position": 3, "name": "Cancel", "text": "Cancel at least 24 hours before renewal to avoid the next charge." }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to export your Elora data",
+        "description": "Request a portable export of your journal data from Elora.",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Contact support", "text": "Email support to request a data export." },
+          { "@type": "HowToStep", "position": 2, "name": "Receive export", "text": "You will receive your entries in a portable format such as JSON." }
+        ]
+      }
+    ]
+  };
+
   return (
     <div style={{
       fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
@@ -16,6 +51,10 @@ export default function Support() {
       lineHeight: '1.6',
       color: 'var(--text)',
     }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
       <h1 style={{
         fontSize: '36px',
         marginBottom: '8px',

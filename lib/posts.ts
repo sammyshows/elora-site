@@ -16,6 +16,13 @@ export interface PostMeta {
 
 export interface Post extends PostMeta {
   contentHtml: string;
+  faqs: { q: string; a: string }[];
+}
+
+export function getRelatedPosts(slug: string, tags: string[], limit = 3): PostMeta[] {
+  return getAllPosts()
+    .filter((p) => p.slug !== slug && p.tags.some((t) => tags.includes(t)))
+    .slice(0, limit);
 }
 
 function computeReadingTime(md: string): string {
@@ -55,5 +62,6 @@ export function getPostBySlug(slug: string): Post {
     tags: (data.tags as string[]) ?? [],
     readingTime: computeReadingTime(fileContents),
     contentHtml: marked.parse(content) as string,
+    faqs: (data.faqs as { q: string; a: string }[]) ?? [],
   };
 }

@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     siteName: 'Elora',
     images: [
       {
-        url: '/hero.webp',
-        width: 1332,
-        height: 1036,
+        url: '/og.jpeg',
+        width: 1200,
+        height: 630,
         alt: 'Elora — AI Voice Journaling App for iOS and Android',
       },
     ],
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Elora — AI Voice Journaling App',
     description: 'Voice-first AI journaling with emotional pattern detection and end-to-end encryption.',
-    images: ['/hero.webp'],
+    images: ['/og.jpeg'],
   },
   icons: {
     icon: [
