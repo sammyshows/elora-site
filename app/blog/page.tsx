@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import SiteHeader from '../components/SiteHeader';
 import { getAllPosts } from '@/lib/posts';
 
 export const metadata: Metadata = {
@@ -7,9 +8,7 @@ export const metadata: Metadata = {
   description: "Guides and answers about AI journaling, voice journaling, and privacy. Learn how AI journaling works, whether it is private, and how to get started.",
   alternates: {
     canonical: '/blog',
-    types: {
-      'application/rss+xml': '/blog/rss.xml',
-    },
+    types: { 'application/rss+xml': '/blog/rss.xml' },
   },
 };
 
@@ -35,54 +34,31 @@ export default function BlogPage() {
   };
 
   return (
-    <div style={{
-      fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-      maxWidth: '800px',
-      margin: '0 auto',
-      padding: '40px 20px',
-      lineHeight: '1.6',
-      color: 'var(--foreground)',
-    }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
-      />
-      <h1 style={{ fontSize: '36px', marginBottom: '8px', fontWeight: '700' }}>
-        Elora Blog
-      </h1>
-      <p style={{ fontSize: '18px', marginBottom: '40px' }}>
-        Guides and answers about AI journaling, voice journaling, and privacy.
-      </p>
+    <div className="min-h-screen bg-background">
+      <SiteHeader />
+      <main className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
+        <h1 className="text-3xl md:text-4xl font-bold text-text mb-2">Elora Blog</h1>
+        <p className="text-lg text-secondary-text mb-10">Guides and answers about AI journaling, voice journaling, and privacy.</p>
 
-      <div style={{ display: 'grid', gap: '20px' }}>
-        {posts.map((post) => (
-          <Link
-            key={post.slug}
-            href={`/blog/${post.slug}`}
-            style={{
-              background: 'var(--surface)',
-              border: '1px solid var(--border)',
-              borderRadius: '8px',
-              padding: '24px',
-              textDecoration: 'none',
-              color: 'inherit',
-              display: 'block',
-            }}
-          >
-            <h2 style={{ fontSize: '22px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
-              {post.title}
-            </h2>
-            <p style={{ margin: '0 0 12px', color: 'var(--foreground)' }}>
-              {post.description}
-            </p>
-            <div style={{ fontSize: '14px', color: 'var(--secondary-text)' }}>
-              {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-              {' · '}
-              {post.readingTime}
-            </div>
-          </Link>
-        ))}
-      </div>
+        <div className="space-y-4">
+          {posts.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="block rounded-2xl border border-border bg-surface p-6 shadow-sm hover:shadow-md hover:border-primary/30 transition-all"
+            >
+              <h2 className="text-lg font-semibold text-text mb-2">{post.title}</h2>
+              <p className="text-sm text-secondary-text mb-3">{post.description}</p>
+              <div className="text-xs text-muted">
+                {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                {' · '}
+                {post.readingTime}
+              </div>
+            </Link>
+          ))}
+        </div>
+      </main>
     </div>
   );
 }

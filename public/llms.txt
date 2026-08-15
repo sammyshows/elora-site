@@ -1,6 +1,6 @@
 # Elora
 
-> Elora is a voice-first AI journaling application for iOS and Android that
+> Elora is a voice and text AI journaling application for iOS and Android that
 > transcribes journal entries, detects emotional patterns, and generates
 > personalized insights. All entries are encrypted end-to-end. Elora is free
 > to download with an optional Elora Premium subscription.

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
+import SiteHeader from '../components/SiteHeader';
 
 export const metadata: Metadata = {
-  title: "Elora Support — Contact & Help",
-  description: "Get help with Elora, the AI voice journaling app. Contact support, find answers about accounts, subscriptions, data export, and deleting your account.",
+  title: "Elora Journaling App | Support",
+  description: "Get help with Elora, the AI journaling app. Find answers about accounts, subscriptions, data export, cancelling Elora Premium, and deleting your account.",
   alternates: { canonical: '/support' },
 };
 
@@ -43,14 +44,16 @@ export default function Support() {
   };
 
   return (
-    <div style={{
-      fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-      maxWidth: '800px',
-      margin: '0 auto',
-      padding: '40px 20px',
-      lineHeight: '1.6',
-      color: 'var(--text)',
-    }}>
+    <div className="min-h-screen bg-background">
+      <SiteHeader />
+      <main style={{
+        fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+        maxWidth: '800px',
+        margin: '0 auto',
+        padding: '40px 20px',
+        lineHeight: '1.6',
+        color: 'var(--text)',
+      }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
@@ -61,17 +64,29 @@ export default function Support() {
         color: 'var(--text)',
         fontWeight: '700'
       }}>
-        Elora Support
+        Elora Journaling App | Support
       </h1>
 
       <p style={{
         fontSize: '16px',
         color: 'var(--text)',
-        marginBottom: '40px',
+        marginBottom: '24px',
         fontStyle: 'italic'
       }}>
         Help and answers for the Elora journaling app.
       </p>
+
+      <div style={{
+        background: '#FFF8E1',
+        border: '1px solid #FFC107',
+        borderRadius: '8px',
+        padding: '16px',
+        marginBottom: '32px',
+        fontSize: '15px',
+        color: 'var(--text)',
+      }}>
+        <p style={{ margin: 0 }}><strong>Elora is the AI journaling app for iOS and Android.</strong> If you are looking for a different service called Elora, this is not the support page for you.</p>
+      </div>
 
       <section style={{ marginBottom: '32px' }}>
         <h2 style={{
@@ -178,6 +193,7 @@ export default function Support() {
           We aim to respond to all inquiries as quickly as possible. Please include as much detail as possible about your question or issue so we can provide the best assistance.
         </p>
       </section>
+      </main>
     </div>
   );
 }

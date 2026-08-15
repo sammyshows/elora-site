@@ -22,7 +22,7 @@ The best journaling app for self-reflection depends on what helps you reflect: s
 
 ### Elora
 
-Elora is a voice-first AI journaling app for iOS and Android with end-to-end encryption. It detects emotional patterns, tags entries with themes, and offers an Explore feature for chatting with your journal history. The Soul Map visualizes recurring themes as a graph. Free to download, with Elora Premium at $4.99/month.
+Elora is a voice and text AI journaling app for iOS and Android with end-to-end encryption. It detects emotional patterns, tags entries with themes, and offers an Explore feature for chatting with your journal history. The Soul Map visualizes recurring themes as a graph. Free to download, with Elora Premium at $4.99/month.
 
 ### Day One
 

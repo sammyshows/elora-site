@@ -76,7 +76,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-text mb-4 xl:mb-8 leading-tight order-1"
               >
-                Elora: the AI journal that <span className="text-primary">truly understands</span> you
+                Elora: the AI journal that truly <span className="text-primary italic">gets</span> you
               </motion.h1>
 
               {/* Hero Screenshot - Shows on mobile/tablet/laptop after heading */}
@@ -105,7 +105,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.1 }}
                 className="text-xl xl:text-2xl text-secondary-text mb-8 leading-relaxed hidden xl:block order-3"
               >
-                Elora is a voice-first AI journaling app with automatic transcription, emotional pattern detection, and end-to-end encryption.
+                Elora is a voice and text AI journaling app with automatic transcription, emotional pattern detection, and end-to-end encryption.
               </motion.p>
 
               <motion.div
@@ -132,7 +132,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="text-lg text-secondary-text mt-6 leading-relaxed xl:hidden order-4"
               >
-                Elora is a voice-first AI journaling app with automatic transcription, emotional pattern detection, and end-to-end encryption.
+                Elora is a voice and text AI journaling app with automatic transcription, emotional pattern detection, and end-to-end encryption.
               </motion.p>
             </div>
 
@@ -427,7 +427,7 @@ export default function Home() {
               "@id": "https://elora.day/#webpage",
               "url": "https://elora.day",
               "name": "Elora — AI Voice Journaling App for iOS & Android",
-              "description": "Elora is a voice-first AI journaling application for iOS and Android that transcribes journal entries, detects emotional patterns, and generates personalized insights. All entries are encrypted end-to-end.",
+              "description": "Elora is a voice and text AI journaling application for iOS and Android that transcribes journal entries, detects emotional patterns, and generates personalized insights. All entries are encrypted end-to-end.",
               "speakable": {
                 "@type": "SpeakableSpecification",
                 "cssSelector": ["#entity-statement"]
@@ -440,7 +440,7 @@ export default function Home() {
             What is Elora?
           </h2>
           <p id="entity-statement" className="text-lg text-secondary-text leading-relaxed mb-8 text-center max-w-3xl mx-auto">
-            Elora is a voice-first AI journaling application for iOS and Android. It transcribes voice journal entries, analyzes text and voice entries for emotional patterns, and generates personalized insights. All entries are encrypted end-to-end. Elora is free to download with an optional Elora Premium subscription.
+            Elora is a voice and text AI journaling application for iOS and Android. It transcribes voice journal entries, analyzes text and voice entries for emotional patterns, and generates personalized insights. All entries are encrypted end-to-end. Elora is free to download with an optional Elora Premium subscription.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-3xl mx-auto">

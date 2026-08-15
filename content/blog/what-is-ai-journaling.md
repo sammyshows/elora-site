@@ -35,7 +35,7 @@ Privacy depends on the app. The important factors are whether entries are end-to
 
 ## What is Elora?
 
-Elora is a voice-first AI journaling app for iOS and Android. It transcribes voice entries, detects emotional patterns, generates personalized insights, and includes an Explore feature that lets you chat with your own journal history. Elora is free to download with an optional Elora Premium subscription of $4.99 per month.
+Elora is a voice and text AI journaling app for iOS and Android. It transcribes voice entries, detects emotional patterns, generates personalized insights, and includes an Explore feature that lets you chat with your own journal history. Elora is free to download with an optional Elora Premium subscription of $4.99 per month.
 
 ## Get started with AI journaling
 

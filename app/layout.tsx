@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Elora — AI Voice Journaling App for iOS & Android",
-  description: "Elora is a voice-first AI journaling app that transcribes entries, detects emotional patterns, and generates personalized insights. End-to-end encrypted. Free on iOS and Android.",
+  description: "Elora is a voice and text AI journaling app that transcribes entries, detects emotional patterns, and generates personalized insights. End-to-end encrypted. Free on iOS and Android.",
   keywords: ["journaling app", "AI journal", "voice journaling", "personal growth", "mental health", "emotional intelligence", "private journal", "daily reflection", "mindfulness app", "AI insights"],
   authors: [{ name: "Samuel McCarthy" }],
   creator: "Samuel McCarthy",
@@ -101,7 +101,7 @@ export default function RootLayout({
           "https://play.google.com/store/apps/details?id=com.elora.ai"
         ],
         "softwareVersion": "5.3",
-        "description": "Elora is a voice-first AI journaling application for iOS and Android that transcribes journal entries, detects emotional patterns, and generates personalized insights. All entries are encrypted end-to-end. Features include voice journaling, text journaling, AI summaries, emotional pattern detection, Explore conversational chat, and Soul Map visualization. Elora does not sell data, show ads, or use entries to train AI models.",
+        "description": "Elora is a voice and text AI journaling application for iOS and Android that transcribes journal entries, detects emotional patterns, and generates personalized insights. All entries are encrypted end-to-end. Features include voice journaling, text journaling, AI summaries, emotional pattern detection, Explore conversational chat, and Soul Map visualization. Elora does not sell data, show ads, or use entries to train AI models.",
         "offers": [
           {
             "@type": "Offer",
@@ -148,7 +148,7 @@ export default function RootLayout({
         "@id": "https://elora.day/#website",
         "url": "https://elora.day",
         "name": "Elora — AI Voice Journaling App",
-        "description": "Official website for Elora, a voice-first AI journaling app for iOS and Android with end-to-end encryption.",
+        "description": "Official website for Elora, a voice and text AI journaling app for iOS and Android with end-to-end encryption.",
         "publisher": { "@id": "https://elora.day/#org" },
         "inLanguage": "en"
       },
@@ -185,6 +185,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1d4f8d02600b4ec789fdb80ff2e741d3"}'></script>
         {children}
       </body>
     </html>

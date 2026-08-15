@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import SiteHeader from '@/app/components/SiteHeader';
 import { getAllPosts, getPostBySlug, getRelatedPosts } from '@/lib/posts';
 
 interface Props {
@@ -103,66 +104,50 @@ export default async function BlogPostPage({ params }: Props) {
   };
 
   return (
-    <div style={{
-      fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-      maxWidth: '800px',
-      margin: '0 auto',
-      padding: '40px 20px',
-      lineHeight: '1.7',
-      color: 'var(--foreground)',
-    }}>
-      <style dangerouslySetInnerHTML={{ __html: markdownStyles }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <Link href="/blog" style={{ color: '#007bff', textDecoration: 'none', fontSize: '15px' }}>
-        &#8592; All articles
-      </Link>
-      <h1 style={{ fontSize: '36px', fontWeight: '700', margin: '16px 0 8px', lineHeight: '1.25' }}>
-        {post.title}
-      </h1>
-      <div style={{ fontSize: '14px', color: 'var(--secondary-text)', marginBottom: '32px' }}>
-        {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-        {' · '}
-        {post.readingTime}
-      </div>
-      <div className="markdown-body">
-        <div id="post-answer" />
-        <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
-      </div>
-
-      {related.length > 0 && (
-        <div style={{
-          marginTop: '48px',
-          paddingTop: '32px',
-          borderTop: '2px solid var(--border)',
-        }}>
-          <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px', color: 'var(--foreground)' }}>
-            Related articles
-          </h3>
-          <div style={{ display: 'grid', gap: '12px' }}>
-            {related.map((r) => (
-              <Link
-                key={r.slug}
-                href={`/blog/${r.slug}`}
-                style={{
-                  background: 'var(--surface)',
-                  border: '1px solid var(--border)',
-                  borderRadius: '6px',
-                  padding: '16px',
-                  textDecoration: 'none',
-                  color: 'inherit',
-                  display: 'block',
-                }}
-              >
-                <div style={{ fontWeight: '600', marginBottom: '4px' }}>{r.title}</div>
-                <div style={{ fontSize: '14px', color: 'var(--secondary-text)' }}>{r.description}</div>
-              </Link>
-            ))}
-          </div>
+    <div className="min-h-screen bg-background">
+      <SiteHeader />
+      <main className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12">
+        <style dangerouslySetInnerHTML={{ __html: markdownStyles }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+        <Link href="/blog" className="text-sm text-primary hover:underline">
+          &#8592; All articles
+        </Link>
+        <h1 className="text-3xl md:text-4xl font-bold text-text mt-4 mb-3 leading-tight">
+          {post.title}
+        </h1>
+        <div className="text-sm text-muted mb-8">
+          {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          {' · '}
+          {post.readingTime}
         </div>
-      )}
+        <div className="markdown-body">
+          <div id="post-answer" />
+          <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+        </div>
+
+        {related.length > 0 && (
+          <div className="mt-12 pt-8 border-t-2 border-border">
+            <h3 className="text-lg font-semibold text-text mb-4">
+              Related articles
+            </h3>
+            <div className="space-y-3">
+              {related.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/blog/${r.slug}`}
+                  className="block rounded-2xl border border-border bg-surface p-5 shadow-sm hover:shadow-md hover:border-primary/30 transition-all"
+                >
+                  <div className="font-semibold text-text mb-1">{r.title}</div>
+                  <div className="text-sm text-secondary-text">{r.description}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+      </main>
     </div>
   );
 }

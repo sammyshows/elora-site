@@ -46,4 +46,4 @@ AI journaling removes three of the biggest barriers to starting:
 
 ## How to start journaling with Elora
 
-Elora is a free voice-first AI journaling app for iOS and Android with end-to-end encryption. Download from the App Store or Google Play, create an account, and speak or type your first entry. The app transcribes your voice, summarizes the entry, and surfaces insights over time. Elora Premium ($4.99/month) adds unlimited Explore chat and advanced insights.
+Elora is a free voice and text AI journaling app for iOS and Android with end-to-end encryption. Download from the App Store or Google Play, create an account, and speak or type your first entry. The app transcribes your voice, summarizes the entry, and surfaces insights over time. Elora Premium ($4.99/month) adds unlimited Explore chat and advanced insights.

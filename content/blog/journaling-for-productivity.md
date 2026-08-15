@@ -31,4 +31,4 @@ At the start of the day, write one thing you want to complete. At the end, write
 
 AI journaling removes the friction that stops people from journaling consistently. Voice input means you can do an end-of-day review in 3 minutes without opening a notebook. Pattern detection surfaces recurring blockers without you needing to re-read past entries.
 
-Elora is a voice-first AI journaling app for iOS and Android. It transcribes entries, generates summaries, and detects patterns. You can use it for productivity journaling alongside personal reflection. Elora is free to download, with an optional Elora Premium subscription of $4.99/month.
+Elora is a voice and text AI journaling app for iOS and Android. It transcribes entries, generates summaries, and detects patterns. You can use it for productivity journaling alongside personal reflection. Elora is free to download, with an optional Elora Premium subscription of $4.99/month.

@@ -48,4 +48,4 @@ A static list of prompts is useful, but generic prompts can feel disconnected fr
 
 ## How to use these prompts with Elora
 
-Elora is a voice-first AI journaling app for iOS and Android. You can speak or type your response to any prompt, and Elora transcribes and summarizes it. Over time, Elora detects the themes in your entries and suggests prompts based on what you have been writing about. Elora is free to download, with an optional Elora Premium subscription of $4.99/month.
+Elora is a voice and text AI journaling app for iOS and Android. You can speak or type your response to any prompt, and Elora transcribes and summarizes it. Over time, Elora detects the themes in your entries and suggests prompts based on what you have been writing about. Elora is free to download, with an optional Elora Premium subscription of $4.99/month.

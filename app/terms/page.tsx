@@ -1,28 +1,31 @@
 import type { Metadata } from 'next';
+import SiteHeader from '../components/SiteHeader';
 
 export const metadata: Metadata = {
-  title: "Elora Terms of Service",
-  description: "Terms and conditions for Elora, the AI voice journaling app. Covers accounts, subscriptions, Elora Premium billing, AI feature liability, and data ownership.",
+  title: "Elora Journaling App | Terms & Conditions",
+  description: "Terms and conditions for Elora, the AI journaling app. Covers accounts, subscriptions, Elora Premium billing, AI feature liability, and data ownership.",
   alternates: { canonical: '/terms' },
 };
 
 export default function Terms() {
   return (
-    <div style={{
-      fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-      maxWidth: '800px',
-      margin: '0 auto',
-      padding: '40px 20px',
-      lineHeight: '1.6',
-      color: 'var(--foreground)'
-    }}>
+    <div className="min-h-screen bg-background">
+      <SiteHeader />
+      <main style={{
+        fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+        maxWidth: '800px',
+        margin: '0 auto',
+        padding: '40px 20px',
+        lineHeight: '1.6',
+        color: 'var(--foreground)'
+      }}>
       <h1 style={{
         fontSize: '36px',
         marginBottom: '8px',
         color: 'var(--foreground)',
         fontWeight: '700'
       }}>
-        Terms & Conditions
+        Elora Journaling App | Terms & Conditions
       </h1>
 
       <p style={{
@@ -33,6 +36,18 @@ export default function Terms() {
       }}>
         Last updated: 7 February 2026
       </p>
+
+      <div style={{
+        background: '#FFF8E1',
+        border: '1px solid #FFC107',
+        borderRadius: '8px',
+        padding: '16px',
+        marginBottom: '24px',
+        fontSize: '15px',
+        color: 'var(--foreground)',
+      }}>
+        <p style={{ margin: 0 }}><strong>Elora is the AI journaling app for iOS and Android.</strong> If you are looking for a different service called Elora, this page is not for you. To cancel an Elora journaling subscription, see Section 13 below.</p>
+      </div>
 
       <div style={{
         background: 'var(--background)',
@@ -56,8 +71,7 @@ export default function Terms() {
           By using Elora, you agree to be bound by these Terms. If you do not agree, please do not use the App.
         </p>
         <p style={{ margin: 0 }}>
-          <strong>Data Controller:</strong> Samuel McCarthy<br/>
-          <strong>Contact Email:</strong> <a href="mailto:samrmccarthy6@gmail.com" style={{ color: 'var(--foreground)', textDecoration: 'none' }}>samrmccarthy6@gmail.com</a>
+          <strong>Data Controller:</strong> Samuel McCarthy
         </p>
       </div>
 
@@ -562,14 +576,27 @@ export default function Terms() {
           color: 'var(--foreground)',
           fontWeight: '600'
         }}>
-          13. Contact Us
+          13. Cancelling Your Subscription
         </h2>
-        <p style={{ margin: 0, fontSize: '16px' }}>
-          For questions about these Terms, please contact:<br/><br/>
-          <strong>Samuel McCarthy</strong><br/>
-          <a href="mailto:samrmccarthy6@gmail.com" style={{ color: 'var(--foreground)', textDecoration: 'none' }}>samrmccarthy6@gmail.com</a>
+        <p style={{ marginBottom: '16px' }}>
+          Subscriptions to Elora Premium are managed by Apple and Google, not by Elora. To cancel your subscription:
+        </p>
+        <ul style={{ paddingLeft: '24px', marginBottom: '16px' }}>
+          <li style={{ marginBottom: '8px' }}>
+            <strong>iOS (App Store):</strong> Open Settings {'>'} your Apple ID {'>'} Subscriptions {'>'} Elora {'>'} Cancel Subscription.
+          </li>
+          <li style={{ marginBottom: '8px' }}>
+            <strong>Android (Google Play):</strong> Open Google Play {'>'} Payments & subscriptions {'>'} Subscriptions {'>'} Elora {'>'} Cancel Subscription.
+          </li>
+        </ul>
+        <p style={{ marginBottom: '16px' }}>
+          Cancel at least 24 hours before your renewal date to avoid the next charge. Refund requests must be directed to Apple Support or Google Play Support; Elora cannot process refunds for in-app purchases.
+        </p>
+        <p style={{ margin: 0 }}>
+          For other questions, visit the <a href="/support" style={{ color: '#007bff', textDecoration: 'none' }}>support page</a>.
         </p>
       </section>
+      </main>
     </div>
   );
 }

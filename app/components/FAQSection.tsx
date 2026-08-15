@@ -20,7 +20,7 @@ const faqs: FAQ[] = [
   },
   {
     question: "Can I use voice to journal?",
-    answer: "Yes. Elora is designed with voice-first journaling. Speak your thoughts naturally and Elora transcribes them automatically. Both voice and text entries feed into the same insight engine."
+    answer: "Yes. Elora is designed with both voice and text journaling. Speak your thoughts naturally and Elora transcribes them automatically. Both voice and text entries feed into the same insight engine."
   },
   {
     question: "What kind of insights does Elora provide?",

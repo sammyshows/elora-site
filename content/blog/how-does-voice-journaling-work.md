@@ -38,4 +38,4 @@ Modern transcription is highly accurate for clear speech, but accuracy drops wit
 
 ## Which app should I use for voice journaling?
 
-Elora is a voice-first AI journaling app for iOS and Android. It transcribes voice entries automatically, detects emotional patterns, and includes an Explore feature for chatting with your journal history. Elora is free to download, with an optional Elora Premium subscription of $4.99 per month.
+Elora is a voice and text AI journaling app for iOS and Android. It transcribes voice entries automatically, detects emotional patterns, and includes an Explore feature for chatting with your journal history. Elora is free to download, with an optional Elora Premium subscription of $4.99 per month.

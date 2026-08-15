@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import SiteHeader from '../components/SiteHeader';
 
 export const metadata: Metadata = {
   title: "Elora Privacy Policy — End-to-End Encrypted Journaling",
@@ -8,14 +9,16 @@ export const metadata: Metadata = {
 
 export default function Privacy() {
   return (
-    <div style={{
-      fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-      maxWidth: '800px',
-      margin: '0 auto',
-      padding: '40px 20px',
-      lineHeight: '1.6',
-      color: 'var(--foreground)',
-    }}>
+    <div className="min-h-screen bg-background">
+      <SiteHeader />
+      <main style={{
+        fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+        maxWidth: '800px',
+        margin: '0 auto',
+        padding: '40px 20px',
+        lineHeight: '1.6',
+        color: 'var(--foreground)',
+      }}>
       <h1 style={{
         fontSize: '36px',
         marginBottom: '8px',
@@ -75,7 +78,7 @@ export default function Privacy() {
           1. Introduction
         </h2>
         <p style={{ marginBottom: '16px' }}>
-          Elora ("the App", "we", "our", "us") is a voice-first, emotionally intelligent journaling app. We are committed to protecting your privacy and ensuring your personal data is handled responsibly.
+          Elora ("the App", "we", "our", "us") is a voice and text, emotionally intelligent journaling app. We are committed to protecting your privacy and ensuring your personal data is handled responsibly.
         </p>
         <p style={{ marginBottom: '16px' }}>
           <strong>Data Controller:</strong> Samuel McCarthy<br/>
@@ -624,6 +627,7 @@ export default function Privacy() {
           <strong>Email:</strong> <a href="mailto:samrmccarthy6@gmail.com" style={{ color: 'var(--foreground)', textDecoration: 'none' }}>samrmccarthy6@gmail.com</a>
         </p>
       </section>
+      </main>
     </div>
   );
 }

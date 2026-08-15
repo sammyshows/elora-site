@@ -1,7 +1,7 @@
 # Elora — Full Entity Reference
 
 ## What is Elora?
-Elora is a voice-first AI journaling application for iOS and Android. It transcribes voice journal entries, analyzes text and voice entries for emotional patterns, and generates personalized insights. All entries are encrypted end-to-end. Elora is free to download with an optional Elora Premium subscription.
+Elora is a voice and text AI journaling application for iOS and Android. It transcribes voice journal entries, analyzes text and voice entries for emotional patterns, and generates personalized insights. All entries are encrypted end-to-end. Elora is free to download with an optional Elora Premium subscription.
 
 ## Platforms
 - iOS (iPhone, iPad) — App Store
