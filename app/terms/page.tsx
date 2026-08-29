@@ -563,18 +563,14 @@ export default function Terms() {
         </p>
       </section>
 
-      <section style={{
-        background: 'var(--background)',
-        border: '2px solid var(--border)',
-        borderRadius: '8px',
-        padding: '24px',
-        marginBottom: '40px'
-      }}>
+      <section style={{ marginBottom: '32px' }}>
         <h2 style={{
           fontSize: '24px',
           marginBottom: '16px',
           color: 'var(--foreground)',
-          fontWeight: '600'
+          fontWeight: '600',
+          borderBottom: '2px solid var(--border)',
+          paddingBottom: '8px'
         }}>
           13. Cancelling Your Subscription
         </h2>
