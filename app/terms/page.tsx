@@ -34,7 +34,7 @@ export default function Terms() {
         marginBottom: '40px',
         fontStyle: 'italic'
       }}>
-        Last updated: 7 February 2026
+        Last updated: 29 August 2026
       </p>
 
       <div style={{
@@ -595,6 +595,88 @@ export default function Terms() {
         <p style={{ margin: 0 }}>
           For other questions, visit the <a href="/support" style={{ color: '#007bff', textDecoration: 'none' }}>support page</a>.
         </p>
+      </section>
+
+      <section style={{ marginBottom: '32px' }}>
+        <h2 style={{
+          fontSize: '24px',
+          marginBottom: '16px',
+          color: 'var(--foreground)',
+          fontWeight: '600',
+          borderBottom: '2px solid var(--border)',
+          paddingBottom: '8px'
+        }}>
+          14. Apple App Store Supplementary Terms
+        </h2>
+        <p style={{ marginBottom: '16px' }}>
+          If you downloaded Elora from the Apple App Store, the following terms apply:
+        </p>
+        <div style={{ display: 'grid', gap: '16px' }}>
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              Acknowledgment
+            </h3>
+            <p style={{ margin: 0 }}>
+              You and Elora acknowledge that these Terms are concluded between you and Elora only, and not with Apple, and that Elora, not Apple, is solely responsible for the App and its content.
+            </p>
+          </div>
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              Scope of License
+            </h3>
+            <p style={{ margin: 0 }}>
+              The license granted to you for Elora is a non-transferable license to use the App on any Apple-branded products that you own or control, as permitted by the Usage Rules set forth in the Apple Media Services Terms and Conditions.
+            </p>
+          </div>
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              Maintenance and Support
+            </h3>
+            <p style={{ margin: 0 }}>
+              Elora is solely responsible for providing any maintenance and support services. You and Elora acknowledge that Apple has no obligation whatsoever to furnish any maintenance and support services with respect to the App.
+            </p>
+          </div>
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              Warranty
+            </h3>
+            <p style={{ margin: 0 }}>
+              In the event of any failure of the App to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price for the App to you (to the maximum extent permitted by applicable law). To the maximum extent permitted by applicable law, Apple has no other warranty obligation whatsoever with respect to the App.
+            </p>
+          </div>
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              Product Claims
+            </h3>
+            <p style={{ margin: 0 }}>
+              Elora, not Apple, is responsible for addressing any claims relating to the App or your possession and/or use of the App, including product liability claims, consumer protection claims, or regulatory compliance claims.
+            </p>
+          </div>
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              Intellectual Property
+            </h3>
+            <p style={{ margin: 0 }}>
+              In the event of any third-party claim that the App or your possession and use of the App infringes a third party's intellectual property rights, Elora, not Apple, will be solely responsible for the investigation, defense, settlement, and discharge of any such claim.
+            </p>
+          </div>
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              Legal Compliance
+            </h3>
+            <p style={{ margin: 0 }}>
+              You represent and warrant that (i) you are not located in a country subject to a U.S. Government embargo or designated as a "terrorist supporting" country, and (ii) you are not listed on any U.S. Government list of prohibited or restricted parties.
+            </p>
+          </div>
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px', color: 'var(--foreground)' }}>
+              Third-Party Beneficiary
+            </h3>
+            <p style={{ margin: 0 }}>
+              You and Elora acknowledge and agree that Apple, and Apple's subsidiaries, are third-party beneficiaries of these Terms, and that Apple will have the right to enforce these Terms against you as a third-party beneficiary.
+            </p>
+          </div>
+        </div>
       </section>
       </main>
     </div>
