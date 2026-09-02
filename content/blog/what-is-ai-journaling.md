@@ -7,7 +7,7 @@ tags: ["ai journaling", "journaling app", "mental wellness"]
 
 ## What is AI journaling?
 
-AI journaling is writing or speaking journal entries into an app that uses artificial intelligence to analyze your words, detect emotional patterns and themes, and generate personalized insights. Unlike a paper journal, an AI journal reads back what you wrote, summarizes it, and surfaces patterns you might not notice on your own.
+AI journaling is writing or speaking journal entries into an app that uses artificial intelligence to analyze your words, uncover emotional and behavioral patterns and themes, and turn them into insight and clarity. Unlike a paper journal, an AI journal reads back what you wrote, summarizes it, and surfaces hidden patterns you might not notice on your own.
 
 ## How does AI journaling work?
 
@@ -35,7 +35,7 @@ Privacy depends on the app. The important factors are whether entries are end-to
 
 ## What is Elora?
 
-Elora is a voice and text AI journaling app for iOS and Android. It transcribes voice entries, detects emotional patterns, generates personalized insights, and includes an Explore feature that lets you chat with your own journal history. Elora is free to download with an optional Elora Premium subscription of $4.99 per month.
+Elora is a voice and text AI journal for iOS and Android built for deep self-discovery. It transcribes voice entries, surfaces emotional and behavioral patterns you might miss, and includes an Explore feature that lets you chat with your journal history for clarity. Elora is free to download with an optional Elora Premium subscription of $4.99 per month.
 
 ## Get started with AI journaling
 

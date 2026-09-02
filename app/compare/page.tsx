@@ -3,19 +3,21 @@ import SiteHeader from '../components/SiteHeader';
 
 export const metadata: Metadata = {
   title: "Elora vs Other Journaling Apps — Comparison",
-  description: "Compare Elora against traditional journaling and other journaling apps. Voice and text input, AI emotional insights, Explore chat, Soul Map, and end-to-end encryption.",
+  description: "Compare Elora against traditional and other AI journaling apps. Deep self-discovery, hidden pattern recognition, conversational mental clarity, and private-by-design storage.",
   alternates: { canonical: '/compare' },
 };
 
 const compareRows: [string, string, string][] = [
+  ['Deep self-discovery insight engine', 'No', 'Yes'],
+  ['Hidden emotional & behavioral pattern detection', 'No', 'Yes'],
+  ['Conversational clarity with your history (Explore)', 'No', 'Yes'],
   ['Voice input with transcription', 'No', 'Yes'],
-  ['Automatic emotional pattern detection', 'No', 'Yes'],
   ['Searchable history by meaning', 'No', 'Yes'],
-  ['Visual timeline of themes', 'No', 'Yes (Soul Map)'],
-  ['Cross-device sync', 'No', 'Yes'],
-  ['End-to-end encryption', 'N/A', 'Yes'],
+  ['Visual map of themes (Soul Map)', 'No', 'Yes'],
   ['AI summaries & insights', 'No', 'Yes'],
   ['Guided reflection prompts', 'No', 'Yes'],
+  ['Cross-device sync', 'No', 'Yes'],
+  ['End-to-end encryption', 'N/A', 'Yes'],
 ];
 
 export default function ComparePage() {
@@ -28,13 +30,13 @@ export default function ComparePage() {
 
         <section className="mb-12">
           <h2 className="text-xl font-semibold text-text mb-3">What makes Elora different?</h2>
-          <p className="text-secondary-text mb-4">Elora combines voice and text journaling with automatic transcription, emotional pattern detection, and a conversational Explore feature that answers questions about your own journal history. Most journaling apps store text only; Elora analyzes it and makes it queryable by meaning.</p>
+          <p className="text-secondary-text mb-4">Elora is built for deep self-discovery. It transcribes your voice and text entries, analyzes them for emotional and behavioral patterns you might miss, and lets you chat with your journal history to turn them into clarity. Most journaling apps only store what you write; Elora helps you understand why you wrote it.</p>
           <ul className="space-y-2 text-sm text-secondary-text pl-5">
             <li>Voice and text input with automatic transcription</li>
-            <li>AI emotional pattern detection across entries</li>
-            <li>Explore: chat with your journal history</li>
-            <li>Soul Map: graph visualization of recurring themes</li>
-            <li>End-to-end encryption</li>
+            <li>Hidden emotional & behavioral pattern recognition</li>
+            <li>Explore: conversational clarity from your journal history</li>
+            <li>Soul Map: visual map of your emotional themes and how they connect</li>
+            <li>Private by default with end-to-end encryption</li>
           </ul>
         </section>
 
@@ -66,10 +68,10 @@ export default function ComparePage() {
           <h2 className="text-xl font-semibold text-text mb-3">Elora vs Other AI Journaling Apps</h2>
           <p className="text-secondary-text mb-4">Elora's differentiators:</p>
           <ul className="space-y-2 text-sm text-secondary-text pl-5">
+            <li><strong className="text-text">Explore</strong> — conversational clarity from your own history.</li>
+            <li><strong className="text-text">Soul Map</strong> — a map of recurring emotional patterns and how they connect.</li>
             <li><strong className="text-text">Offline-first storage</strong> — journal without internet, sync securely when online.</li>
-            <li><strong className="text-text">Explore</strong> — a queryable journal that answers questions about your own history.</li>
-            <li><strong className="text-text">Soul Map</strong> — a graph of your recurring themes, emotions, and connections.</li>
-            <li><strong className="text-text">End-to-end encryption</strong> — no data selling, no ads, no AI training on your entries.</li>
+            <li><strong className="text-text">End-to-end encryption</strong> — private by design, no data selling, no ads, no AI training on your entries.</li>
           </ul>
         </section>
 

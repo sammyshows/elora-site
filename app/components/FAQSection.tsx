@@ -8,7 +8,7 @@ interface FAQ {
 const faqs: FAQ[] = [
   {
     question: "What is Elora and how does it work?",
-    answer: "Elora is an AI-powered voice journaling app for iOS and Android. You journal using voice or text. Elora transcribes voice entries, analyzes them for emotional themes and patterns, and provides personalized insights. All entries are encrypted end-to-end."
+    answer: "Elora is an AI journal for iOS and Android built for deep self-discovery. You journal using voice or text. Elora transcribes voice entries, analyzes them for emotional and behavioral patterns, and turns them into clarity. All entries are encrypted end-to-end."
   },
   {
     question: "Is my journal data private and secure?",
@@ -16,7 +16,7 @@ const faqs: FAQ[] = [
   },
   {
     question: "How is Elora different from other journaling apps?",
-    answer: "Elora combines voice journaling, automatic emotional pattern detection, and a conversational Explore feature that lets you ask questions about your own journal history. Most journaling apps store text only; Elora analyzes it and makes it searchable by meaning and theme."
+    answer: "Elora combines voice journaling, emotional and behavioral pattern recognition, and a conversational Explore feature that turns your journal history into clarity. Most journaling apps store text only; Elora helps you understand why you wrote it — by meaning and theme."
   },
   {
     question: "Can I use voice to journal?",
@@ -24,7 +24,7 @@ const faqs: FAQ[] = [
   },
   {
     question: "What kind of insights does Elora provide?",
-    answer: "Elora generates summaries, emotional themes, and behavioral insights after each entry. It tracks recurring patterns, mood trends, and personal growth indicators across your journal history. Insights become more personalized as you journal more."
+    answer: "Elora generates summaries, emotional themes, and behavioral insights after each entry. It surfaces hidden patterns, mood trends, and personal growth indicators across your journal history, giving you clarity on how you actually think and feel."
   },
   {
     question: "What is the Explore feature?",

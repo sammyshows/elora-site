@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elora — AI Voice Journaling App for iOS & Android",
-  description: "Elora is a voice and text AI journaling app that transcribes entries, detects emotional patterns, and generates personalized insights. End-to-end encrypted. Free on iOS and Android.",
-  keywords: ["journaling app", "AI journal", "voice journaling", "personal growth", "mental health", "emotional intelligence", "private journal", "daily reflection", "mindfulness app", "AI insights"],
+  title: "Elora — AI Journal for Deep Self-Discovery",
+  description: "Elora is a voice and text AI journal built for deep self-discovery. It uncovers hidden emotional and behavioral patterns, reveals how your thinking changes over time, and lets you talk through your life for real mental clarity. Free on iOS and Android.",
+  keywords: ["journaling app", "AI journal", "voice journaling", "deep self-discovery", "emotional pattern recognition", "behavioral patterns", "mental clarity", "self-awareness", "personal growth", "AI insights"],
   authors: [{ name: "Samuel McCarthy" }],
   creator: "Samuel McCarthy",
   publisher: "Elora",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://elora.day',
-    title: 'Elora — AI Voice Journaling App for iOS & Android',
-    description: 'Voice-first AI journaling with automatic transcription, emotional pattern detection, and end-to-end encryption. Free download.',
+    title: 'Elora — AI Journal for Deep Self-Discovery',
+    description: 'An AI journal that reveals your hidden emotional and behavioral patterns and turns them into clarity. Voice or text your entries and let Elora help you understand yourself.',
     siteName: 'Elora',
     images: [
       {
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Elora — AI Voice Journaling App',
-    description: 'Voice-first AI journaling with emotional pattern detection and end-to-end encryption.',
+    title: 'Elora — Deep Self-Discovery Journaling',
+    description: 'Uncover hidden emotional and behavioral patterns in your journaling, then talk them through for real mental clarity.',
     images: ['/og.jpeg'],
   },
   icons: {
@@ -101,7 +101,7 @@ export default function RootLayout({
           "https://play.google.com/store/apps/details?id=com.elora.ai"
         ],
         "softwareVersion": "5.3",
-        "description": "Elora is a voice and text AI journaling application for iOS and Android that transcribes journal entries, detects emotional patterns, and generates personalized insights. All entries are encrypted end-to-end. Features include voice journaling, text journaling, AI summaries, emotional pattern detection, Explore conversational chat, and Soul Map visualization. Elora does not sell data, show ads, or use entries to train AI models.",
+        "description": "Elora is a voice and text AI journaling application for iOS and Android built for deep self-discovery. It transcribes entries, analyzes them for emotional and behavioral patterns, surfaces recurring themes, and lets you converse with your journal history for mental clarity. Entries are encrypted end-to-end, and Elora never sells data, shows ads, or trains AI on your entries.",
         "offers": [
           {
             "@type": "Offer",
@@ -120,15 +120,16 @@ export default function RootLayout({
           }
         ],
         "featureList": [
+          "Deep self-discovery through AI journaling",
+          "Emotional and behavioral pattern recognition across entries",
           "Voice journaling with automatic transcription",
           "Text journaling",
+          "Conversational mental clarity: chat with your journal history",
           "AI summaries, themes, and emotional tags",
-          "Emotional pattern detection across entries",
-          "Explore: conversational chat with journal history",
-          "Soul Map: graph visualization of recurring themes",
+          "Soul Map: visual map of your emotional patterns and connections",
           "Offline-first storage with secure cloud sync",
-          "End-to-end encryption",
           "Cross-device sync",
+          "End-to-end encryption",
           "No ads, no data selling, no AI training on user entries"
         ],
         "screenshot": [
@@ -148,7 +149,7 @@ export default function RootLayout({
         "@id": "https://elora.day/#website",
         "url": "https://elora.day",
         "name": "Elora — AI Voice Journaling App",
-        "description": "Official website for Elora, a voice and text AI journaling app for iOS and Android with end-to-end encryption.",
+        "description": "Official website for Elora, a voice and text AI journal for iOS and Android that turns daily entries into deep self-discovery and mental clarity.",
         "publisher": { "@id": "https://elora.day/#org" },
         "inLanguage": "en"
       },

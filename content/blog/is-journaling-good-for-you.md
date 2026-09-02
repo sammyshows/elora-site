@@ -33,4 +33,4 @@ The biggest obstacle is not skepticism — it is friction. Starting a journaling
 
 Journaling is backed by decades of research as an effective practice for mental wellness and personal growth. The challenge has always been consistency, not effectiveness. AI journaling addresses the consistency problem by making it easier to start and more rewarding to continue.
 
-Elora is a voice and text AI journaling app for iOS and Android with end-to-end encryption. It transcribes entries, surfaces emotional patterns, and provides guided prompts. Elora is free to download, with an optional Elora Premium subscription of $4.99/month.
+Elora is a voice and text AI journal for iOS and Android built for deep self-discovery, with end-to-end encryption. It transcribes entries, surfaces emotional and behavioral patterns, and provides guided prompts. Elora is free to download, with an optional Elora Premium subscription of $4.99/month.

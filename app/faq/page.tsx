@@ -3,20 +3,20 @@ import SiteHeader from '../components/SiteHeader';
 
 export const metadata: Metadata = {
   title: "Elora FAQ — Frequently Asked Questions",
-  description: "Answers to common questions about Elora, the AI journaling app. Pricing, privacy, encryption, features, voice and text journaling, and how to delete or export your data.",
+  description: "Answers about Elora, the AI journal for deep self-discovery. How pattern recognition works, voice and text journaling, Explore chat, pricing, and privacy.",
   alternates: { canonical: '/faq' },
 };
 
 const faqs: { question: string; answer: string }[] = [
-  { question: "What is Elora?", answer: "Elora is a voice and text AI journaling app for iOS and Android. It transcribes voice journal entries, analyzes them for emotional patterns, and generates personalized insights. All entries are encrypted end-to-end." },
+  { question: "What is Elora?", answer: "Elora is a voice and text AI journal for iOS and Android built for deep self-discovery. It transcribes voice entries, analyzes them for emotional and behavioral patterns, and generates personalized insights and clarity. All entries are end-to-end encrypted." },
   { question: "How does Elora work?", answer: "You journal by voice or text. Elora transcribes voice entries automatically, then analyzes each entry for emotional themes and topics. It generates summaries and tags, and over time it detects patterns and trends across your journal." },
   { question: "Is Elora free?", answer: "Yes. Elora is free to download with core journaling, AI summaries, and pattern tracking. Elora Premium adds unlimited Explore chat and advanced insights." },
   { question: "How much does Elora Premium cost?", answer: "Elora Premium is $4.99 per month (USD), billed via Apple or Google. An Annual plan is also available." },
   { question: "Is Elora available on Android?", answer: "Yes. Elora is available on both the Apple App Store (iOS) and Google Play (Android). Your journal syncs across devices when signed into the same account." },
   { question: "Can I journal with my voice?", answer: "Yes. Speak your entry and Elora transcribes it automatically. You can also type if you prefer. Both input methods feed into the same insight engine." },
   { question: "What is the Explore feature?", answer: "Explore is a conversational AI interface that answers questions based on your journal history. You can ask about past entries, recurring themes, or personal growth trends, and it searches your entries by meaning." },
-  { question: "What is the Soul Map?", answer: "The Soul Map is a graph visualization that connects your thoughts, emotions, and recurring themes across journal entries. It helps you see how different parts of your life connect." },
-  { question: "What insights does Elora provide?", answer: "Elora generates summaries, emotional themes, and behavioral insights after each entry. It tracks recurring patterns, mood trends, and personal growth indicators across your journal history." },
+  { question: "What is the Soul Map?", answer: "The Soul Map is a visual map of your emotional patterns. It connects recurring themes, moods, and the parts of your life you write about, so you can see how your thinking connects over time." },
+  { question: "What insights does Elora provide?", answer: "Elora generates summaries, emotional themes, and behavioral insights after each entry. It surfaces hidden patterns, mood trends, and personal growth indicators across your journal history, giving you clarity on how you actually think and feel." },
   { question: "Is Elora end-to-end encrypted?", answer: "Yes. All journal entries are encrypted end-to-end. Only you can read your entries; Elora does not have access to your journal content." },
   { question: "Does Elora sell my data?", answer: "No. Elora does not sell user data and does not show advertisements." },
   { question: "Does Elora train AI on my journal?", answer: "No. Elora does not use your entries, summaries, or embeddings to train any external AI models. AI processing is limited to providing the app's features back to you." },

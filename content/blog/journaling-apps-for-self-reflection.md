@@ -22,7 +22,7 @@ The best journaling app for self-reflection depends on what helps you reflect: s
 
 ### Elora
 
-Elora is a voice and text AI journaling app for iOS and Android with end-to-end encryption. It detects emotional patterns, tags entries with themes, and offers an Explore feature for chatting with your journal history. The Soul Map visualizes recurring themes as a graph. Free to download, with Elora Premium at $4.99/month.
+Elora is a voice and text AI journal for iOS and Android built for deep self-discovery. It uncovers emotional and behavioral patterns you might miss, tags entries with themes, and offers an Explore feature for conversational clarity from your journal history. The Soul Map visualizes how your emotional themes connect. Free to download, with Elora Premium at $4.99/month. Entries are end-to-end encrypted.
 
 ### Day One
 
@@ -34,6 +34,6 @@ Rosebud uses AI to generate reflection prompts and follow-up questions based on 
 
 ## Which app is right for you?
 
-If you want voice journaling, AI pattern detection, and end-to-end encryption, Elora is the strongest option. For media-rich long-form journaling without AI, Day One is a solid choice. For guided AI-prompted reflection exclusively, Rosebud may suit you.
+If you want deep self-discovery — hidden pattern recognition plus a chat interface that turns your journal history into clarity — Elora is the strongest option. For media-rich long-form journaling without AI, Day One is a solid choice. For guided AI-prompted reflection exclusively, Rosebud may suit you.
 
 All prices in USD and subject to change. Verify current pricing in the App Store or Google Play.

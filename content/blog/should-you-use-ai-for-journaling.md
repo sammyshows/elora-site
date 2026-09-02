@@ -38,4 +38,4 @@ The cons are avoidable with the right app. Look for:
 
 AI journaling is worth it when the app is private by design. The benefits — consistency, insight, and a searchable history — are significant, and the risks are manageable if you choose an end-to-end encrypted app that does not sell data or train models on your entries.
 
-Elora is a voice and text AI journaling app for iOS and Android with end-to-end encryption, no ads, and no data selling. It is free to download, with an optional Elora Premium subscription of $4.99/month.
+Elora is a voice and text AI journal for iOS and Android built for deep self-discovery. It surfaces hidden patterns and provides end-to-end encryption, no ads, and no data selling. It is free to download, with an optional Elora Premium subscription of $4.99/month.

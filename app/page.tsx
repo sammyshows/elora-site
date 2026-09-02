@@ -105,7 +105,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.1 }}
                 className="text-xl xl:text-2xl text-secondary-text mb-8 leading-relaxed hidden xl:block order-3"
               >
-                Elora is a voice and text AI journaling app with automatic transcription, emotional pattern detection, and end-to-end encryption.
+                Elora is the AI journal that uncovers your hidden emotional and behavioral patterns — entry by entry, it reveals how you really think, feel, and grow, so you can see yourself clearly.
               </motion.p>
 
               <motion.div
@@ -132,7 +132,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="text-lg text-secondary-text mt-6 leading-relaxed xl:hidden order-4"
               >
-                Elora is a voice and text AI journaling app with automatic transcription, emotional pattern detection, and end-to-end encryption.
+                Elora is the AI journal that uncovers your hidden emotional and behavioral patterns — entry by entry, it reveals how you really think, feel, and grow, so you can see yourself clearly.
               </motion.p>
             </div>
 
@@ -164,7 +164,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Why Elora is different"
-            subtitle="Elora analyzes journal entries with AI, works by voice or text, and encrypts everything end-to-end."
+            subtitle="Elora analyzes your voice and text entries with AI to surface the emotional and behavioral patterns behind your thoughts — and turns them into clarity."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <FeatureCard
@@ -373,9 +373,9 @@ export default function Home() {
           />
           <ScreenshotShowcase
             imageSrc="/screenshots/timeline-view.webp"
-            title="Your thoughts, your space"
-            alt="Elora private journal with end-to-end encryption, local device storage, and complete data privacy protection"
-            description="Complete privacy and security. Your journal entries are encrypted and stay on your device. No cloud sync means no data breaches."
+            title="Your growth, kept private"
+            alt="Elora journal showing how your emotional patterns and personal growth connect over time, with private end-to-end encrypted storage"
+            description="See your self-discovery in one place. Your entries fuel deep pattern analysis while staying encrypted on your device — reflection you can trust."
             reverse={true}
             index={5}
           />
@@ -427,7 +427,7 @@ export default function Home() {
               "@id": "https://elora.day/#webpage",
               "url": "https://elora.day",
               "name": "Elora — AI Voice Journaling App for iOS & Android",
-              "description": "Elora is a voice and text AI journaling application for iOS and Android that transcribes journal entries, detects emotional patterns, and generates personalized insights. All entries are encrypted end-to-end.",
+              "description": "Elora is a voice and text AI journaling application for iOS and Android built for deep self-discovery. It transcribes entries, analyzes them for emotional and behavioral patterns, and lets you converse with your journal history for mental clarity. Entries are encrypted end-to-end.",
               "speakable": {
                 "@type": "SpeakableSpecification",
                 "cssSelector": ["#entity-statement"]
@@ -440,7 +440,7 @@ export default function Home() {
             What is Elora?
           </h2>
           <p id="entity-statement" className="text-lg text-secondary-text leading-relaxed mb-8 text-center max-w-3xl mx-auto">
-            Elora is a voice and text AI journaling application for iOS and Android. It transcribes voice journal entries, analyzes text and voice entries for emotional patterns, and generates personalized insights. All entries are encrypted end-to-end. Elora is free to download with an optional Elora Premium subscription.
+            Elora is a voice and text AI journal for iOS and Android built for deep self-discovery. It transcribes voice entries, analyzes them for hidden emotional and behavioral patterns, and lets you chat with your own journal history for mental clarity. Entries are end-to-end encrypted, and Elora never sells data, shows ads, or trains AI on your entries. Elora is free to download with an optional Elora Premium subscription.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-3xl mx-auto">
@@ -543,7 +543,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-secondary-text mb-10"
           >
-            Free to download. End-to-end encrypted. Available on iOS and Android.
+            Free to download. Turn one entry into deep self-discovery. Available on iOS and Android.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -575,7 +575,7 @@ export default function Home() {
                 <span className="text-xl font-bold">Elora</span>
               </div>
               <p className="text-secondary-text text-sm">
-                AI voice journaling app for iOS and Android. End-to-end encrypted. Free download.
+                AI journal for deep self-discovery. Understand your hidden patterns, think clearly, and grow. Free download on iOS and Android.
               </p>
             </div>
             <div>

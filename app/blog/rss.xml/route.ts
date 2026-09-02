@@ -23,7 +23,7 @@ export async function GET() {
 <channel>
   <title>Elora Blog</title>
   <link>https://elora.day/blog</link>
-  <description>Guides and answers about AI journaling, voice journaling, and privacy.</description>
+  <description>Guides on AI journaling for deep self-discovery. Learn how an AI journal finds hidden emotional and behavioral patterns, supports self-reflection, and builds mental clarity.</description>
   <language>en-us</language>
   <atom:link href="https://elora.day/blog/rss.xml" rel="self" type="application/rss+xml"/>
 ${items}

@@ -5,7 +5,7 @@ import { getAllPosts } from '@/lib/posts';
 
 export const metadata: Metadata = {
   title: "Elora Blog — AI Journaling Guides & Answers",
-  description: "Guides and answers about AI journaling, voice journaling, and privacy. Learn how AI journaling works, whether it is private, and how to get started.",
+  description: "Guides on AI journaling for deep self-discovery. Learn how an AI journal finds hidden emotional and behavioral patterns, supports self-reflection, and builds mental clarity.",
   alternates: {
     canonical: '/blog',
     types: { 'application/rss+xml': '/blog/rss.xml' },
@@ -19,7 +19,7 @@ export default function BlogPage() {
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Elora Blog",
-    "description": "Guides and answers about AI journaling, voice journaling, and privacy.",
+    "description": "Guides on AI journaling for deep self-discovery.",
     "url": "https://elora.day/blog",
     "publisher": { "@id": "https://elora.day/#org" },
     "blogPost": posts.map((p) => ({
@@ -39,7 +39,7 @@ export default function BlogPage() {
       <main className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
         <h1 className="text-3xl md:text-4xl font-bold text-text mb-2">Elora Blog</h1>
-        <p className="text-lg text-secondary-text mb-10">Guides and answers about AI journaling, voice journaling, and privacy.</p>
+        <p className="text-lg text-secondary-text mb-10">Guides on AI journaling for deep self-discovery — hidden patterns, self-reflection, and clarity.</p>
 
         <div className="space-y-4">
           {posts.map((post) => (

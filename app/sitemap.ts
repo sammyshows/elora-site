@@ -3,7 +3,7 @@ import { getAllPosts } from '@/lib/posts';
 
 // Pin lastmod to the date of the most recent real content change rather than
 // the build date. Update this value when you meaningfully edit these pages.
-const LAST_MODIFIED = new Date('2026-08-15');
+const LAST_MODIFIED = new Date('2026-09-03');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://elora.day';

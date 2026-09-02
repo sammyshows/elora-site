@@ -37,7 +37,7 @@ When choosing an AI journaling app for mental wellness, these features matter mo
 
 ## How Elora handles mental health journaling
 
-Elora is a voice and text AI journaling app for iOS and Android with end-to-end encryption. It transcribes entries, detects emotional patterns, and generates insights. Elora does not diagnose conditions or provide medical advice. It is a self-reflection tool, designed to be private, ad-free, and never to sell your data or train AI on your entries.
+Elora is a voice and text AI journal for iOS and Android built for deep self-discovery. It transcribes entries, surfaces emotional and behavioral patterns, and generates insights. Elora does not diagnose conditions or provide medical advice. It is a self-reflection tool, designed to be private, ad-free, and never to sell your data or train AI on your entries.
 
 **If you are in crisis**, contact local emergency services immediately (000 in Australia, 911 in the United States, or your local equivalent).
 
