@@ -69,6 +69,8 @@ export default function GuidedPage() {
 
   const voiceUsedRef = useRef(false);
   const savePromptLoggedRef = useRef(false);
+  const gatewayLoggedRef = useRef(false);
+  const doneLoggedRef = useRef(false);
   const bootedRef = useRef(false);
 
   const persist = () => {
@@ -155,6 +157,22 @@ export default function GuidedPage() {
       void flushEvents();
     }
   }, [stage, card, turns]);
+
+  // View events. These are client-fired (not Turnstile-gated), so treat them
+  // as UX-rough signals — the trustworthy "real human started" metric stays
+  // server-side: guided_session_start on the Turnstile-protected init.
+  React.useEffect(() => {
+    if (stage === 'gateway' && !gatewayLoggedRef.current) {
+      gatewayLoggedRef.current = true;
+      track(GuidedEventNames.GATEWAY_VIEWED, 0);
+      void flushEvents();
+    }
+    if (stage === 'done' && !doneLoggedRef.current) {
+      doneLoggedRef.current = true;
+      track(GuidedEventNames.DONE_VIEWED, 0);
+      void flushEvents();
+    }
+  }, [stage]);
 
   // ----------------------------------------------------------------- actions
   const beginGuided = async () => {
@@ -297,6 +315,8 @@ export default function GuidedPage() {
       if (!window.confirm('Start a new entry? Your current progress will be discarded.')) return;
       localStorage.removeItem(STORAGE_KEY);
     }
+    track(GuidedEventNames.DISCARDED, 0);
+    void flushEvents();
     const newUserId = typeof window !== 'undefined' ? ensureUserId() : '';
     setLogUser(newUserId);
     // If the quota gate is already tripped, restoring to the gateway would
@@ -313,6 +333,8 @@ export default function GuidedPage() {
     setError(null);
     setGenerating(false);
     savePromptLoggedRef.current = false;
+    gatewayLoggedRef.current = false;
+    doneLoggedRef.current = false;
     voiceUsedRef.current = false;
   };
 

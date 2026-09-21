@@ -14,6 +14,9 @@ import { ClientEvent } from '@/lib/guided-api';
 
 export const GuidedEventNames = Object.freeze({
   SESSION_START: 'guided_session_start',
+  GATEWAY_VIEWED: 'guided_gateway_viewed',
+  DONE_VIEWED: 'guided_done_viewed',
+  DISCARDED: 'guided_discarded',
   INPUT_SUBMITTED: 'guided_input_submitted',
   FOLLOWUP_PRESENTED: 'guided_followup_presented',
   SYNTHESIS_STARTED: 'guided_synthesis_started',
