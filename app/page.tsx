@@ -86,12 +86,12 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="xl:hidden order-2 mb-6"
               >
-                <div className="relative w-full max-w-md mx-auto my-4 px-4 sm:px-0">
+                <div className="relative w-2/3 mx-auto my-4 px-4 sm:px-0">
                   <Image
-                    src="/hero.webp"
-                    alt="Elora journal app interface showing AI insights, voice journaling, and personal growth tracking features"
-                    width={800}
-                    height={600}
+                    src="/screenshots/never-stare.jpg"
+                    alt="Elora in the Elora app"
+                    width={1290}
+                    height={2796}
                     priority
                     className="w-full h-auto rounded-2xl relative z-10"
                   />
@@ -143,16 +143,23 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="hidden xl:flex flex-1 justify-center items-center"
             >
-              <div className="relative w-full max-w-2xl">
+              <div className="relative w-full max-w-2xl grid grid-cols-2 gap-5 items-start justify-items-center">
                 <Image
-                  src="/hero.webp"
-                  alt="Elora journal app interface showing AI insights, voice journaling, and personal growth tracking features"
-                  width={800}
-                  height={600}
+                  src="/screenshots/never-stare.jpg"
+                  alt="Elora in the Elora app"
+                  width={1290}
+                  height={2796}
                   priority
                   className="w-full h-auto rounded-2xl xl:rounded-3xl relative z-10"
                 />
-                <div className="absolute bottom-0 left-[10%] right-[10%] h-8 bg-black/20 blur-2xl -z-10 translate-y-4"></div>
+                <Image
+                  src="/screenshots/build.jpg"
+                  alt="Elora reflection in the Elora app"
+                  width={1290}
+                  height={2796}
+                  priority
+                  className="w-full h-auto rounded-2xl xl:rounded-3xl relative z-10 mt-10"
+                />
               </div>
             </motion.div>
           </div>

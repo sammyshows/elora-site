@@ -15,6 +15,17 @@ html {
   --muted: #999999;
   --muted-background: #E8EAED;
   --border: #E8EAED;
+
+  /* Guided journaling canvas tokens (mirrors elora theme.ts + web spec) */
+  --guided-canvas: #F8F8F8;
+  --guided-surface: #FFFFFF;
+  --guided-ink: #0B0B0B;
+  --guided-ink-soft: #555555;
+  --guided-muted: #999999;
+  --guided-border: #E3DED7;
+  --guided-accent: #035afc;
+  --guided-emotion-tag: #C1DFF0;
+  --guided-highlight: #FBEEC1;
 }
 
 @theme inline {
@@ -37,4 +48,194 @@ body {
   color: var(--text);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   color-scheme: light;
+}
+
+/* ============================================================
+   Guided journaling — modern responsive web experience
+   (elora.day/guided). Mobile → tablet → desktop fluid layout.
+   ============================================================ */
+
+/* Page canvas: soft radial brand glow fading down to the alabaster canvas. */
+.guided-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-tap-highlight-color: transparent;
+  background:
+    radial-gradient(120% 130% at 50% -6%, rgba(3, 90, 252, 0.05) 0%, rgba(3, 90, 252, 0.015) 42%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(180deg, var(--guided-canvas) 0%, #f4f4f4 100%);
+  background-repeat: no-repeat;
+  color: var(--guided-ink);
+}
+
+/* Fluid content column: full-bleed on phones, centered + wider on tablets/desktop. */
+.guided-shell {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 720px;
+  padding-inline: clamp(16px, 4vw, 48px);
+}
+@media (min-width: 1100px) {
+  .guided-shell {
+    /* a touch wider so desktop doesn't feel cramped */
+    max-width: 820px;
+  }
+}
+
+/* ----------------------------------------------------------
+   Typographic scale (responsive via clamp)
+   ---------------------------------------------------------- */
+.guided-display {
+  font-size: clamp(34px, 5.5vw, 54px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  font-weight: 650;
+}
+.guided-heading {
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+  font-weight: 650;
+}
+.guided-lede {
+  font-size: clamp(15px, 1.8vw, 18px);
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: var(--guided-ink-soft);
+}
+.guided-body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--guided-ink-soft);
+}
+.guided-micro {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--guided-muted);
+}
+
+/* ----------------------------------------------------------
+   Surfaces
+   ---------------------------------------------------------- */
+.guided-card {
+  background: var(--guided-surface);
+  border: 1px solid color-mix(in srgb, var(--guided-border) 78%, white);
+  border-radius: 20px;
+  box-shadow:
+    0 1px 1px rgba(16, 24, 40, 0.05),
+    0 2px 6px rgba(16, 24, 40, 0.06),
+    0 12px 32px rgba(16, 24, 40, 0.10);
+}
+.guided-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 5px 12px;
+  background: color-mix(in srgb, var(--guided-accent) 10%, white);
+  color: color-mix(in srgb, var(--guided-accent) 45%, var(--guided-ink));
+  font-size: 13px;
+  font-weight: 550;
+}
+.guided-sep {
+  height: 1px;
+  width: 100%;
+  background: color-mix(in srgb, var(--guided-border) 70%, white);
+}
+
+/* ----------------------------------------------------------
+   Primary action button (modern pill)
+   ---------------------------------------------------------- */
+.guided-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 15px;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 650;
+  font-family: var(--font-geist-sans), sans-serif;
+  color: #fff;
+  background: linear-gradient(180deg, #0a63f0 0%, var(--guided-accent) 100%);
+  box-shadow:
+    0 1px 2px rgba(3, 90, 252, 0.45),
+    0 8px 18px rgba(3, 90, 252, 0.28);
+  transition: transform 0.18s ease, box-shadow 0.22s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+.guided-cta:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 2px 3px rgba(3, 90, 252, 0.5),
+    0 12px 26px rgba(3, 90, 252, 0.34);
+  filter: saturate(1.06);
+}
+.guided-cta:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 1px 2px rgba(3, 90, 252, 0.4);
+}
+.guided-cta:disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Spinner for the "Reflecting…" continue button. */
+.guided-spinner {
+  animation: guided-spin 0.85s linear infinite;
+}
+@keyframes guided-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Quiet text link-button used for "Finish & Save". */
+.guided-link-cta {
+  border: none;
+  background: none;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 620;
+  color: var(--guided-ink-soft);
+  cursor: pointer;
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+.guided-link-cta:hover {
+  color: var(--guided-ink);
+  background-color: color-mix(in srgb, var(--guided-surface) 94%, var(--guided-accent));
+}
+.guided-link-cta:disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------------
+   Sticky glass surfaces (nav + action bar)
+   ---------------------------------------------------------- */
+.guided-glass {
+  background: color-mix(in srgb, var(--guided-surface) 92%, transparent);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid color-mix(in srgb, var(--guided-border) 70%, white);
+}
+
+/* Focus rings for keyboard/a11y users. */
+:is(button, a, textarea, input):focus-visible {
+  outline: 2px solid var(--guided-accent);
+  outline-offset: 2px;
+  border-radius: inherit;
+}
+
+/* Tap targets that scale slightly on hover (cards). */
+.guided-lift {
+  transition: transform 0.2s ease, box-shadow 0.24s ease;
+}
+.guided-lift:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 2px 3px rgba(16, 24, 40, 0.06),
+    0 16px 40px rgba(16, 24, 40, 0.14);
 }
