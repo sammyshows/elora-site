@@ -45,14 +45,31 @@ export async function runTurnstile(action: string): Promise<string | null> {
   document.body.appendChild(container);
 
   return new Promise<string | null>((resolve) => {
-    g.turnstile.render(containerId, {
-      sitekey: siteKey,
-      action,
-      theme: 'light',
-      callback: (token: string) => resolve(token),
-      'error-callback': () => resolve(null),
-    });
+    const done = (value: string | null) => {
+      resolve(value);
+      try {
+        container.remove();
+      } catch {
+        /* already gone */
+      }
+    };
+
+    try {
+      // Pass the element node (not the id string): avoids the widget's
+      // getElementById lookup racing the insert.
+      g.turnstile.render(container, {
+        sitekey: siteKey,
+        action,
+        theme: 'light',
+        callback: (token: string) => done(token),
+        'error-callback': () => done(null),
+      });
+    } catch (err) {
+      console.warn('[Elora] Turnstile render failed:', err);
+      done(null);
+      return;
+    }
     // Safety net — the callback should always fire, but never hang the flow.
-    setTimeout(() => resolve(null), 15000);
+    setTimeout(() => done(null), 15000);
   });
 }
