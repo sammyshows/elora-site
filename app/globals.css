@@ -2,6 +2,9 @@
 
 html {
   scroll-behavior: smooth;
+  /* Reserve the scrollbar gutter so the page never jolts sideways when
+     content height crosses the fold (e.g. during the guided boot/init). */
+  scrollbar-gutter: stable;
 }
 
 :root {

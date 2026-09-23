@@ -25,11 +25,38 @@ async function loadTurnstileScript(): Promise<void> {
   });
 }
 
+// Single-use token cache so the first click never waits on the widget.
+const tokenCache = new Map<string, { token: string; at: number }>();
+const TOKEN_TTL_MS = 300_000; // Turnstile tokens are valid for 5 minutes
+const TOKEN_SLACK_MS = 10_000;
+
 /**
- * Render the invisible Turnstile and await the token.
- * @returns the challenge token, or null when disabled/errored.
+ * Render the invisible Turnstile once and stash the token so the first
+ * interaction is instant. Call at boot / on stage entry, not per request.
+ */
+export async function prewarmTurnstile(action: string): Promise<void> {
+  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  if (!siteKey || tokenCache.has(action)) return;
+  const token = await renderTurnstile(action);
+  if (token) tokenCache.set(action, { token, at: Date.now() });
+}
+
+/**
+ * Take a token for an action, re-rendering the widget only if the cached one
+ * is stale or missing.
  */
 export async function runTurnstile(action: string): Promise<string | null> {
+  const cached = tokenCache.get(action);
+  const fresh = cached && Date.now() - cached.at < TOKEN_TTL_MS - TOKEN_SLACK_MS;
+  if (fresh) {
+    tokenCache.delete(action); // single-use
+    return cached.token;
+  }
+  tokenCache.delete(action);
+  return renderTurnstile(action);
+}
+
+async function renderTurnstile(action: string): Promise<string | null> {
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
   if (!siteKey) return null; // dev: no widget, backend skips verification
 

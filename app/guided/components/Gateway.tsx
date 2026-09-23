@@ -34,12 +34,20 @@ function RecommendedBadge() {
  * GATEWAY — mode cards, responsive (stack → 2-up), hover-lift,
  * "Recommended" badge on Guided, clear "start" affordance.
  */
-export function Gateway({ onGuided, onTraditional }: { onGuided: () => void; onTraditional: () => void }) {
+export function Gateway({
+  onGuided,
+  onTraditional,
+  starting = false,
+}: {
+  onGuided: () => void;
+  onTraditional: () => void;
+  starting?: boolean;
+}) {
   return (
     <div className="grid grid-cols-1 -mx-4 gap-4 sm:grid-cols-2 sm:-mx-6 items-stretch">
       <FadeUp delay={0.06} y={12}>
-        <PressableScale onTap={onGuided} radius={22} style={{ cursor: 'pointer' }}>
-          <div className="guided-card guided-lift px-6 py-4 h-full">
+        <PressableScale onTap={starting ? undefined : onGuided} radius={22} style={{ cursor: starting ? 'default' : 'pointer' }}>
+          <div className="guided-card guided-lift px-6 py-4 h-full" style={{ opacity: starting ? 0.6 : 1 }}>
             <div className="flex items-center justify-between">
               <span
                 className="flex items-center justify-center"
@@ -62,7 +70,7 @@ export function Gateway({ onGuided, onTraditional }: { onGuided: () => void; onT
               Get inspiration from one of Elora&apos;s prompts and follow it wherever it leads.
             </p>
             <div className="mt-4 flex items-center gap-2" style={{ color: T.accent, fontSize: 14, fontWeight: 600 }}>
-              Start reflecting
+              {starting ? 'Starting…' : 'Start reflecting'}
               <ArrowRight size={16} color="#035afc" strokeWidth={2} />
             </div>
           </div>
@@ -70,8 +78,8 @@ export function Gateway({ onGuided, onTraditional }: { onGuided: () => void; onT
       </FadeUp>
 
       <FadeUp delay={0.16} y={12}>
-        <PressableScale onTap={onTraditional} radius={22} style={{ cursor: 'pointer' }}>
-          <div className="guided-card guided-lift px-6 py-4 h-full">
+        <PressableScale onTap={starting ? undefined : onTraditional} radius={22} style={{ cursor: starting ? 'default' : 'pointer' }}>
+          <div className="guided-card guided-lift px-6 py-4 h-full" style={{ opacity: starting ? 0.6 : 1 }}>
             <div className="flex items-center justify-between">
               <span
                 className="flex items-center justify-center"
@@ -96,7 +104,7 @@ export function Gateway({ onGuided, onTraditional }: { onGuided: () => void; onT
               Something&apos;s already on your mind? Open a blank page and let it out.
             </p>
             <div className="mt-4 flex items-center gap-2" style={{ color: T.inkSoft, fontSize: 14, fontWeight: 600 }}>
-              Start writing
+              {starting ? 'Starting…' : 'Start writing'}
               <ArrowRight size={16} color="#6B7280" strokeWidth={2} />
             </div>
           </div>

@@ -11,7 +11,7 @@ import {
   synthesizeGuidedJournal,
 } from '@/lib/guided-api';
 import { GuidedEventNames, setLogUser, track, flushEvents } from '@/lib/guided-events';
-import { runTurnstile } from '@/lib/turnstile';
+import { prewarmTurnstile, runTurnstile } from '@/lib/turnstile';
 import { randomOpeningPrompt } from '@/lib/guided-prompts';
 import { ANSWER_LIMIT, bumpAnswerCount, ensureUserId, isLocked, nextRunId, resolveUserId } from '@/lib/guided-quota';
 import { Gateway } from './components/Gateway';
@@ -65,6 +65,7 @@ export default function GuidedPage() {
   const [limitReached, setLimitReached] = useState(false);
   const [card, setCard] = useState<ReflectionCardData | null>(null);
   const [claimed, setClaimed] = useState(false);
+  const [starting, setStarting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const voiceUsedRef = useRef(false);
@@ -102,6 +103,10 @@ export default function GuidedPage() {
       // so the first API call never blocks on sign-in.
       setLogUser(ensureUserId());
       void resolveUserId().then((id) => setLogUser(id));
+      // Warm the Turnstile widget + tokens at boot so the first click on the
+      // gateway never waits on JS load / a fresh challenge.
+      void prewarmTurnstile('elora_guided_init');
+      void prewarmTurnstile('elora_guided_synthesize');
       const claimedParam = new URLSearchParams(window.location.search).get('claimed');
       const saved = loadPersisted();
 
@@ -172,11 +177,17 @@ export default function GuidedPage() {
       track(GuidedEventNames.DONE_VIEWED, 0);
       void flushEvents();
     }
+    if (stage === 'answer') {
+      // Warm the follow-up challenge before the first Continue.
+      void prewarmTurnstile('elora_guided_follow_up');
+    }
   }, [stage]);
 
   // ----------------------------------------------------------------- actions
   const beginGuided = async () => {
+    if (starting) return;
     setError(null);
+    setStarting(true);
     try {
       const init = await initGuidedJournal(
         await resolveUserId(),
@@ -194,11 +205,15 @@ export default function GuidedPage() {
     } catch (err) {
       setError(toMessage(err));
       setStage('gateway');
+    } finally {
+      setStarting(false);
     }
   };
 
   const beginTraditional = async () => {
+    if (starting) return;
     setError(null);
+    setStarting(true);
     try {
       const init = await initGuidedJournal(
         await resolveUserId(),
@@ -216,6 +231,8 @@ export default function GuidedPage() {
     } catch (err) {
       setError(toMessage(err));
       setStage('gateway');
+    } finally {
+      setStarting(false);
     }
   };
 
@@ -443,7 +460,7 @@ export default function GuidedPage() {
                 </div>
 
                 <div className="mt-9" style={{ marginTop: 'clamp(32px, 5vh, 56px)' }}>
-                  <Gateway onGuided={() => void beginGuided()} onTraditional={() => void beginTraditional()} />
+                  <Gateway onGuided={() => void beginGuided()} onTraditional={() => void beginTraditional()} starting={starting} />
                 </div>
 
                 <p className="guided-micro text-center" style={{ marginTop: 28 }}>
